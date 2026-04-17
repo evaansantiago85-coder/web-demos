@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cenote Dos Ojos</title>
+<meta name="description" content="Nada por cavernas de piedra caliza con el agua más transparente que hayas visto en tu vida.">
+<meta property="og:title" content="Cenote Dos Ojos">
+<meta property="og:description" content="Nada por cavernas de piedra caliza con el agua más transparente que hayas visto en tu vida.">
+<meta property="og:image" content="https://source.unsplash.com/1600x900/?cenote%20snorkel%2Cunderwater%20cave%20mexico">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;}
+.demo-banner{position:fixed;top:0;left:0;right:0;background:#0f172a;color:#fff;padding:10px 16px;z-index:100;text-align:center;font-size:13px;}
+.demo-banner a{color:#60a5fa;text-decoration:underline;}
+.lang-switch{position:fixed;top:50px;right:16px;z-index:99;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-radius:999px;padding:4px;box-shadow:0 4px 20px rgba(0,0,0,0.15);display:flex;gap:2px;}
+.lang-switch button{padding:6px 14px;border-radius:999px;font-weight:700;font-size:12px;border:none;cursor:pointer;transition:all 0.2s;background:transparent;color:#64748b;}
+.lang-switch button.active{background:#0f172a;color:#fff;}
+main{padding-top:50px;}
+</style>
+</head>
+<body class="bg-white text-slate-900">
+<div class="demo-banner">🎨 <b>Demo</b> · <span data-demo-banner-en>Personalized preview for Cenote Dos Ojos · Fully customizable · Like it? </span><span data-demo-banner-es hidden>Demo preliminar para Cenote Dos Ojos · 100% personalizable · ¿Te gusta? </span><a href="https://wa.me/529989800664">WhatsApp</a></div>
+<div class="lang-switch" role="group" aria-label="Language">
+  <button type="button" data-lang-btn="en">EN</button>
+  <button type="button" data-lang-btn="es">ES</button>
+</div>
+<main>
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0"><img src="https://source.unsplash.com/1600x900/?cenote%20snorkel%2Cunderwater%20cave%20mexico" alt="Hero" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-slate-900/80"></div></div>
+  <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto py-20">
+    <div class="inline-block px-4 py-1.5 rounded-full bg-white/15 backdrop-blur text-xs font-semibold tracking-wide uppercase mb-6 border border-white/20" data-i18n="hero_eyebrow">Snorkel y buceo en los ríos subterráneos de Tulum</div>
+    <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6" data-i18n="hero_title">El Cenote Más Increíble de la Riviera Maya</h1>
+    <p class="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto" data-i18n="hero_subtitle">Nada por cavernas de piedra caliza con el agua más transparente que hayas visto en tu vida.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="https://wa.me/529989800664" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-full shadow-lg transition"><span data-i18n="hero_cta_primary">Reserva tu Tour de Snorkel</span></a>
+      <a href="#services" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur border border-white/30 hover:bg-white/20 text-white font-bold rounded-full transition" data-i18n="hero_cta_secondary">Ver todas las experiencias</a>
+    </div>
+    <div class="mt-10 flex items-center justify-center gap-2 text-sm">
+      <span class="text-amber-400 text-lg">★★★★★</span>
+      <span class="text-white/90 font-semibold">4.7/5</span>
+      <span class="text-white/60">· 7833 <span data-i18n="rating_suffix">reseñas en Google</span></span>
+    </div>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-indigo-600 to-purple-700 py-14"><div class="max-w-5xl mx-auto px-6 grid grid-cols-3 gap-6" id="stats-container"></div></section>
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_about">Sobre nosotros</div>
+    <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-8" data-i18n="about_title">La Aventura Cenote que Buscabas</h2>
+    <div id="about-text" class="prose prose-slate max-w-none text-slate-600 leading-relaxed"></div>
+  </div>
+</section>
+<section id="services" class="py-20 px-6 bg-slate-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14"><div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_services">Qué ofrecemos</div></div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="services-container"></div>
+  </div>
+</section>
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14"><div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_gallery">Galería</div></div>
+    <div class="grid md:grid-cols-3 md:grid-rows-2 gap-4"><div class="aspect-[4/3] overflow-hidden rounded-2xl md:col-span-2 md:row-span-2 md:aspect-square group"><img src="https://source.unsplash.com/600x400/?cenote%20snorkel&sig=0" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?underwater%20cave%20mexico&sig=1" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?tulum%20jungle&sig=2" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?crystal%20clear%20water&sig=3" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?yucatan%20cavern&sig=4" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?cenote%20snorkel&sig=5" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div></div>
+  </div>
+</section>
+<section class="py-20 px-6 bg-slate-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14"><div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_testimonials">Lo que dicen nuestros clientes</div></div>
+    <div class="grid md:grid-cols-3 gap-6" id="testimonials-container"></div>
+  </div>
+</section>
+<section class="relative py-20 px-6 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-emerald-500 to-emerald-700"></div>
+  <div class="relative max-w-4xl mx-auto text-center text-white">
+    <h2 class="text-4xl md:text-5xl font-black mb-4" data-i18n="cta_banner_title">¿Listo para sumergirte?</h2>
+    <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl mx-auto" data-i18n="cta_banner_text">Los lugares se agotan rápido, especialmente fines de semana y temporada alta. Reserva tu fecha hoy y llega a disfrutar.</p>
+    <a href="https://wa.me/529989800664" class="inline-flex items-center gap-2 px-10 py-4 bg-white text-emerald-700 font-bold rounded-full shadow-xl hover:shadow-2xl transition"><span data-i18n="label_whatsapp">Escríbenos por WhatsApp</span></a>
+  </div>
+</section>
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+    <div>
+      <div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_contact">Contacto</div>
+      <div class="space-y-4 text-slate-700 mt-6">
+        <div class="flex items-start gap-3"><span class="text-xl">📍</span><div><div class="font-semibold">Tulum</div></div></div>
+        <div class="flex items-start gap-3"><span class="text-xl">📞</span><div><div class="font-semibold" data-i18n="label_phone">Llámanos</div><a href="tel:+529989800664" class="text-sm text-indigo-600 hover:underline">+529989800664</a></div></div>
+        <div class="flex items-start gap-3"><span class="text-xl">💬</span><div><div class="font-semibold" data-i18n="label_whatsapp">Escríbenos por WhatsApp</div><a href="https://wa.me/529989800664" class="text-sm text-emerald-600 hover:underline">+529989800664</a></div></div>
+        <div class="flex items-start gap-3"><span class="text-xl">⭐</span><div><div class="font-semibold">4.7/5</div><div class="text-sm">7833 <span data-i18n="rating_suffix">reseñas en Google</span></div></div></div>
+      </div>
+    </div>
+    <div class="aspect-video rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+      <iframe src="https://maps.google.com/maps?q=Cenote%20Dos%20Ojos%20Tulum&output=embed" class="w-full h-full" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+<footer class="bg-slate-900 text-slate-400 py-10 px-6 text-center text-sm">
+  <div class="font-bold text-white mb-2">Cenote Dos Ojos</div>
+  <div class="mb-4">Tulum · +529989800664</div>
+  <div class="text-xs opacity-75">© 2026 · <a href="https://wa.me/529989800664" class="text-emerald-400 hover:underline" data-i18n="footer_cta">Reserva tu visita</a></div>
+</footer>
+</main>
+<script>
+const I18N = {"en":{"hero_eyebrow":"Snorkel & Dive in Tulum's Underground Rivers","hero_title":"Discover the World Below Tulum","hero_subtitle":"Swim through ancient limestone caves filled with the clearest water you've ever seen.","hero_cta_primary":"Book Your Snorkel Tour","hero_cta_secondary":"Explore All Experiences","about_title":"Tulum's Finest Cenote Experience","about_text":"Dos Ojos is one of the most spectacular underwater cave systems in the Yucatán Peninsula — and we've been guiding visitors through its crystal-clear waters since the early days of eco-tourism in Tulum. Our team of certified guides knows every twist of the caverns, every beam of light that filters through the limestone, and every safety detail that makes the difference between a good tour and an unforgettable one.\n\nWe run small groups on purpose. No cattle-call crowds, no rushing you through. Whether you're a first-time snorkeler or a seasoned diver, we match the experience to your comfort level. Our equipment is top-grade and maintained daily.\n\nDos Ojos sits just 25 minutes south of Tulum town. We handle transport, gear, and guidance — you just show up ready to be amazed.","cta_banner_title":"Ready to Dive In?","cta_banner_text":"Spots fill up fast — especially on weekends and holidays. Lock in your date now and show up ready to explore.","footer_cta":"Book your visit","label_phone":"Call us","label_hours":"Hours","label_whatsapp":"WhatsApp us","section_about":"About us","section_services":"What we offer","section_gallery":"Gallery","section_testimonials":"What our guests say","section_contact":"Contact","rating_suffix":"reviews on Google","services":[{"icon":"🤿","title":"Classic Snorkel Tour","desc":"Guided snorkel tour through the iconic Bat Cave and Barbie Line sections of Dos Ojos. Wetsuit, fins, mask, and life jacket included. Perfect for all skill levels."},{"icon":"🧭","title":"Cavern Diving","desc":"Go deeper into the cenote with a certified cavern dive. Explore underwater passages where few people ever go, guided by our PADI-certified instructors."},{"icon":"🌊","title":"Discover Scuba (First Timer)","desc":"Not a certified diver? No problem. Our Discover Scuba session lets you try scuba for the first time in the safe, shallow areas of the cenote with a guide by your side."},{"icon":"🚐","title":"Hotel Pickup & Transfer","desc":"Skip the hassle — we pick you up from your hotel in Tulum or Playa del Carmen and bring you back after the tour. Round-trip transport in comfortable, air-conditioned vans."},{"icon":"📸","title":"Private Group & Photo Tours","desc":"Reserve the cenote for your company retreat, photography shoot, or family reunion. Exclusive access windows available on select mornings before public hours."},{"icon":"🗺️","title":"Multi-Cenote Full Day","desc":"Combine Dos Ojos with other top cenotes like Gran Cenote or Casa Cenote in one full-day guided experience. Lunch stop included at a local Tulum restaurant."}],"testimonials":[{"name":"Jake M.","rating":5,"text":"Honestly one of the best things I did on my whole Mexico trip. The guides were calm, knowledgeable, and the water visibility was insane. Booked the classic snorkel tour and wished I'd added the cavern dive too."},{"name":"Sofía R.","rating":5,"text":"I was nervous about snorkeling in a cave but the team made me feel completely safe from the start. The light coming through the water is something out of a movie. I cried a little, honestly."},{"name":"Carlos V.","rating":4,"text":"Great experience overall. The transport pickup was on time, gear was clean and well-fitted, and the guide spoke both English and Spanish which helped our mixed group a lot. Took off one star because the parking area got crowded by midday."}],"stats":[{"number":"7,833","label":"Verified Guest Reviews"},{"number":"4.7⭐","label":"Average Star Rating"},{"number":"15+","label":"Years Guiding Cenote Tours"}]},"es":{"hero_eyebrow":"Snorkel y buceo en los ríos subterráneos de Tulum","hero_title":"El Cenote Más Increíble de la Riviera Maya","hero_subtitle":"Nada por cavernas de piedra caliza con el agua más transparente que hayas visto en tu vida.","hero_cta_primary":"Reserva tu Tour de Snorkel","hero_cta_secondary":"Ver todas las experiencias","about_title":"La Aventura Cenote que Buscabas","about_text":"Dos Ojos es uno de los sistemas de cuevas subacuáticas más impresionantes de la Península de Yucatán, y llevamos años guiando a viajeros por sus aguas cristalinas desde que el ecoturismo empezó a florecer en Tulum. Nuestro equipo de guías certificados conoce cada rincón de las cavernas, cada rayo de luz que atraviesa la caliza y cada detalle de seguridad que convierte un tour en una experiencia que no se olvida.\n\nTrabajamos con grupos pequeños a propósito. Sin aglomeraciones ni carreras. Ya sea tu primera vez haciendo snorkel o llevas años buceando, adaptamos la experiencia a tu nivel. El equipo es de primera calidad y se revisa todos los días.\n\nDos Ojos está a solo 25 minutos al sur del pueblo de Tulum. Nosotros nos encargamos del transporte, el equipo y la guía — tú solo llega con ganas de quedarte sin palabras.","cta_banner_title":"¿Listo para sumergirte?","cta_banner_text":"Los lugares se agotan rápido, especialmente fines de semana y temporada alta. Reserva tu fecha hoy y llega a disfrutar.","footer_cta":"Reserva tu visita","label_phone":"Llámanos","label_hours":"Horario","label_whatsapp":"Escríbenos por WhatsApp","section_about":"Sobre nosotros","section_services":"Qué ofrecemos","section_gallery":"Galería","section_testimonials":"Lo que dicen nuestros clientes","section_contact":"Contacto","rating_suffix":"reseñas en Google","services":[{"icon":"🤿","title":"Tour Clásico de Snorkel","desc":"Tour guiado de snorkel por las secciones Cueva de los Murciélagos y Barbie Line de Dos Ojos. Traje de neopreno, aletas, careta y chaleco incluidos. Ideal para todos los niveles."},{"icon":"🧭","title":"Buceo en Caverna","desc":"Adéntrate más con un buceo en caverna certificado. Explora pasillos subacuáticos donde pocas personas han estado, con instructores certificados PADI."},{"icon":"🌊","title":"Discover Scuba (Primera Vez)","desc":"¿No tienes certificación de buceo? Sin problema. Nuestro Discover Scuba te permite probar el buceo por primera vez en las zonas seguras del cenote con un guía a tu lado."},{"icon":"🚐","title":"Traslado desde tu Hotel","desc":"Olvídate de complicaciones — te recogemos en tu hotel en Tulum o Playa del Carmen y te traemos de vuelta al terminar. Traslado redondo en camionetas con aire acondicionado."},{"icon":"📸","title":"Tours Privados y Sesiones Fotográficas","desc":"Reserva el cenote para tu retiro corporativo, sesión fotográfica o reunión familiar. Acceso exclusivo disponible algunas mañanas antes de la apertura al público."},{"icon":"🗺️","title":"Día Completo Multi-Cenote","desc":"Combina Dos Ojos con otros cenotes top como Gran Cenote o Casa Cenote en una jornada completa de un día. Incluye parada para comer en un restaurante local de Tulum."}],"testimonials":[{"name":"Jake M.","rating":5,"text":"Sin duda uno de los mejores momentos de todo mi viaje a México. Los guías eran tranquilos, muy preparados, y la visibilidad del agua era increíble. Hice el tour clásico de snorkel y me quedé con ganas de hacer el buceo en caverna también."},{"name":"Sofía R.","rating":5,"text":"Tenía miedo de hacer snorkel en una cueva, pero el equipo me hizo sentir súper segura desde el primer momento. La luz que entra por el agua parece de película. La verdad es que me emocioné, no lo voy a negar."},{"name":"Carlos V.","rating":4,"text":"Muy buena experiencia en general. El transporte llegó puntual, el equipo estaba limpio y bien ajustado, y el guía hablaba español e inglés, lo cual ayudó mucho a nuestro grupo mixto. Le quito una estrella porque el área de estacionamiento se llenó bastante al mediodía."}],"stats":[{"number":"7,833","label":"Reseñas verificadas de visitantes"},{"number":"4.7⭐","label":"Calificación promedio"},{"number":"15+","label":"Años guiando tours en cenotes"}]}};
+const DEFAULT_LANG = "es";
+function renderStats(lang){
+  const c = document.getElementById('stats-container');
+  c.innerHTML = I18N[lang].stats.map(s => `<div class="text-center"><div class="text-4xl md:text-5xl font-black text-white">${s.number}</div><div class="text-sm text-white/80 mt-1">${s.label}</div></div>`).join('');
+}
+function renderAbout(lang){
+  const c = document.getElementById('about-text');
+  c.innerHTML = I18N[lang].about_text.split(/\n\n+/).map(p => `<p class="mb-4">${p}</p>`).join('');
+}
+function renderServices(lang){
+  const c = document.getElementById('services-container');
+  c.innerHTML = I18N[lang].services.map(s => `<div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition border border-slate-100"><div class="text-4xl mb-3">${s.icon}</div><h3 class="text-lg font-bold text-slate-900 mb-2">${s.title}</h3><p class="text-sm text-slate-600 leading-relaxed">${s.desc}</p></div>`).join('');
+}
+function renderTestimonials(lang){
+  const c = document.getElementById('testimonials-container');
+  c.innerHTML = I18N[lang].testimonials.map(t => {
+    const stars = '★'.repeat(t.rating) + '☆'.repeat(5 - t.rating);
+    return `<figure class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100"><div class="text-amber-400 mb-3">${stars}</div><blockquote class="text-slate-700 text-sm leading-relaxed mb-4">"${t.text}"</blockquote><figcaption class="text-xs font-semibold text-slate-900">— ${t.name}</figcaption></figure>`;
+  }).join('');
+}
+function applyLang(lang){
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.dataset.i18n;
+    if (I18N[lang][k] !== undefined) el.textContent = I18N[lang][k];
+  });
+  document.querySelector('[data-demo-banner-en]').hidden = lang !== 'en';
+  document.querySelector('[data-demo-banner-es]').hidden = lang !== 'es';
+  document.querySelectorAll('[data-lang-btn]').forEach(b => {
+    b.classList.toggle('active', b.dataset.langBtn === lang);
+  });
+  renderStats(lang); renderAbout(lang); renderServices(lang); renderTestimonials(lang);
+  try { localStorage.setItem('demo_lang', lang); } catch(e){}
+}
+let saved = DEFAULT_LANG;
+try { saved = localStorage.getItem('demo_lang') || DEFAULT_LANG; } catch(e){}
+applyLang(saved);
+document.querySelectorAll('[data-lang-btn]').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.langBtn)));
+</script>
+</body>
+</html>
