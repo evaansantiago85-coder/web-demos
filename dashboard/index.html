@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coastal Web Hunter · Dashboard</title>
+<meta name="theme-color" content="#0EA5E9">
+<link rel="manifest" href="data:application/json,%7B%22name%22%3A%22Coastal+Dashboard%22%2C%22short_name%22%3A%22Coastal%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23F8FAFC%22%2C%22theme_color%22%3A%22%230EA5E9%22%2C%22icons%22%3A%5B%5D%7D">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = {theme: {extend: {colors: {brand: '#0EA5E9', accent: '#F59E0B'}, fontFamily: {sans: ['Inter', 'sans-serif']}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://unpkg.com/recharts@2/umd/Recharts.js"></script>
+<style>
+body{font-family:'Inter',system-ui,sans-serif;background:#F8FAFC;color:#0F172A;}
+.card{background:#fff;border-radius:12px;box-shadow:0 1px 3px rgba(15,23,42,0.06),0 1px 2px rgba(15,23,42,0.04);}
+.btn-primary{background:#F59E0B;color:#fff;font-weight:700;padding:10px 18px;border-radius:10px;transition:all 0.15s;}
+.btn-primary:hover{background:#D97706;transform:translateY(-1px);}
+.btn-secondary{background:#0EA5E9;color:#fff;font-weight:600;padding:8px 14px;border-radius:8px;}
+.btn-secondary:hover{background:#0284C7;}
+.btn-outline{border:1px solid #CBD5E1;background:#fff;color:#0F172A;font-weight:600;padding:8px 14px;border-radius:8px;}
+.btn-outline:hover{border-color:#0EA5E9;color:#0EA5E9;}
+.badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;}
+.stage-NUEVO{background:#E0F2FE;color:#075985;}
+.stage-CONTACTADO{background:#DBEAFE;color:#1E40AF;}
+.stage-RESPONDIO_FRIO{background:#E0E7FF;color:#4338CA;}
+.stage-RESPONDIO_CALIENTE{background:#FEF3C7;color:#92400E;}
+.stage-DEMO_ENVIADA{background:#FED7AA;color:#9A3412;}
+.stage-NEGOCIANDO{background:#FECACA;color:#991B1B;}
+.stage-OBJECION{background:#FBCFE8;color:#9F1239;}
+.stage-CERRADO_GANADO{background:#BBF7D0;color:#166534;}
+.stage-CERRADO_PERDIDO{background:#E5E7EB;color:#374151;}
+.stage-GHOSTED{background:#F3F4F6;color:#6B7280;}
+.scrollbar-hide::-webkit-scrollbar{display:none;}
+.scrollbar-hide{-ms-overflow-style:none;scrollbar-width:none;}
+.drawer-backdrop{background:rgba(15,23,42,0.55);backdrop-filter:blur(4px);}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#0F172A;color:#fff;padding:12px 20px;border-radius:10px;box-shadow:0 10px 25px rgba(0,0,0,0.2);z-index:1000;animation:slideUp 0.3s ease;}
+@keyframes slideUp{from{opacity:0;transform:translate(-50%,20px);}to{opacity:1;transform:translate(-50%,0);}}
+.gauge{width:140px;height:70px;position:relative;overflow:hidden;}
+.flag{font-size:1.4em;line-height:1;}
+@media(max-width:768px){.sidebar{display:none;}.bottom-nav{display:flex!important;}}
+@media(min-width:769px){.bottom-nav{display:none;}}
+</style>
+</head>
+<body>
+<div id="root"><div class="min-h-screen flex items-center justify-center"><div class="text-slate-400">🌊 Cargando…</div></div></div>
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useMemo, useRef } = React;
+const { BarChart, Bar, PieChart, Pie, Cell, LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } = Recharts;
+
+const STAGES = ['NUEVO','CONTACTADO','RESPONDIO_FRIO','RESPONDIO_CALIENTE','DEMO_ENVIADA','NEGOCIANDO','OBJECION','CERRADO_GANADO','CERRADO_PERDIDO','GHOSTED'];
+const STAGE_LABELS = {NUEVO:'Nuevo',CONTACTADO:'Contactado',RESPONDIO_FRIO:'Respondió Frío',RESPONDIO_CALIENTE:'Respondió Caliente',DEMO_ENVIADA:'Demo Enviada',NEGOCIANDO:'Negociando',OBJECION:'Objeción',CERRADO_GANADO:'Cerrado Ganado',CERRADO_PERDIDO:'Cerrado Perdido',GHOSTED:'Ghosted'};
+const NAV = [
+  {id:'home', icon:'🏠', label:'Home'},
+  {id:'local', icon:'🏖️', label:'Locales'},
+  {id:'freelance', icon:'💼', label:'Freelance'},
+  {id:'casos', icon:'🏆', label:'Casos Éxito'},
+  {id:'demos', icon:'🖥️', label:'Demos'},
+  {id:'agenda', icon:'📅', label:'Agenda'},
+  {id:'analytics', icon:'📊', label:'Analytics'},
+  {id:'settings', icon:'⚙️', label:'Ajustes'}
+];
+const toast = (msg) => {
+  const el = document.createElement('div');
+  el.className = 'toast';
+  el.textContent = msg;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 2800);
+};
+
+// Queue local updates → user forwards as email to populate sibling's user_updates_inbox
+function queueUpdate(type, payload) {
+  const queue = JSON.parse(localStorage.getItem('update_queue') || '[]');
+  queue.push({ts: new Date().toISOString(), type, payload});
+  localStorage.setItem('update_queue', JSON.stringify(queue));
+  toast('✅ Cambio guardado · pendiente sincronizar');
+}
+function getQueue() { return JSON.parse(localStorage.getItem('update_queue') || '[]'); }
+function clearQueue() { localStorage.removeItem('update_queue'); }
+
+function flag(pais) { return pais === 'US' ? '🇺🇸' : pais === 'MX' ? '🇲🇽' : '🌐'; }
+function fmtMoney(n) { return '$' + (n||0).toLocaleString('en-US'); }
+function fmtDate(s) { if (!s) return '—'; return new Date(s).toLocaleDateString('es', {day:'2-digit',month:'short'}); }
+
+
+function Login({onLogin, password}) {
+  const [pw, setPw] = useState('');
+  return (
+    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-sky-50 to-slate-50">
+      <div className="card p-8 max-w-sm w-full">
+        <div className="text-center mb-6">
+          <div className="text-4xl mb-2">🌊</div>
+          <h1 className="text-2xl font-black">Coastal Dashboard</h1>
+          <p className="text-sm text-slate-500 mt-1">Acceso restringido</p>
+        </div>
+        <input type="password" className="w-full px-4 py-3 border border-slate-300 rounded-lg mb-3 focus:border-brand focus:outline-none" placeholder="Contraseña" value={pw} onChange={e=>setPw(e.target.value)} onKeyDown={e=>e.key==='Enter'&&(pw===password?onLogin():toast('❌ Contraseña incorrecta'))} autoFocus/>
+        <button className="btn-primary w-full" onClick={()=>pw===password?onLogin():toast('❌ Contraseña incorrecta')}>Entrar</button>
+        <p className="text-xs text-slate-400 mt-4 text-center">Tip: añádelo a tu pantalla de inicio como PWA</p>
+      </div>
+    </div>
+  );
+}
+
+function Sidebar({active, setActive, stats}) {
+  return (
+    <aside className="sidebar fixed left-0 top-0 bottom-0 w-60 bg-white border-r border-slate-200 flex flex-col">
+      <div className="p-5 border-b border-slate-100">
+        <div className="flex items-center gap-2 mb-1"><span className="text-2xl">🌊</span><span className="font-black text-lg">Coastal</span></div>
+        <div className="text-xs text-slate-500">Freelance + Web Hunter</div>
+      </div>
+      <nav className="flex-1 p-3 space-y-1 overflow-y-auto">
+        {NAV.map(n => (
+          <button key={n.id} onClick={()=>setActive(n.id)} className={'w-full text-left px-3 py-2.5 rounded-lg transition flex items-center gap-3 text-sm ' + (active===n.id?'bg-sky-50 text-brand font-bold':'text-slate-600 hover:bg-slate-50')}>
+            <span className="text-lg">{n.icon}</span>{n.label}
+          </button>
+        ))}
+      </nav>
+      <div className="p-3 border-t border-slate-100 text-xs text-slate-500">
+        <div className="mb-1">Revenue mes: <span className="font-bold text-emerald-600">{fmtMoney(stats.revenue_month_usd)}</span></div>
+        <div>Pipeline: <span className="font-bold text-amber-600">{fmtMoney(stats.pipeline_potential)}</span></div>
+      </div>
+    </aside>
+  );
+}
+
+function BottomNav({active, setActive}) {
+  return (
+    <div className="bottom-nav hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 overflow-x-auto scrollbar-hide z-40">
+      <div className="flex min-w-max">
+        {NAV.map(n => (
+          <button key={n.id} onClick={()=>setActive(n.id)} className={'flex-1 min-w-[72px] py-2 px-2 flex flex-col items-center gap-0.5 ' + (active===n.id?'text-brand':'text-slate-500')}>
+            <span className="text-xl">{n.icon}</span><span className="text-[10px] font-semibold">{n.label}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function KpiCard({label, value, sub, icon, color='#0EA5E9'}) {
+  return (
+    <div className="card p-5">
+      <div className="flex items-start justify-between mb-2"><span className="text-2xl">{icon}</span></div>
+      <div className="text-3xl font-black" style={{color}}>{value}</div>
+      <div className="text-sm text-slate-600 mt-1">{label}</div>
+      {sub && <div className="text-xs text-slate-400 mt-1">{sub}</div>}
+    </div>
+  );
+}
+
+
+function mergePipeline(leads, pipeline) {
+  const pmap = Object.fromEntries(pipeline.map(p => [p.lead_id, p]));
+  return leads.map(l => ({...l, pipeline: pmap[l.id] || null, stage: pmap[l.id]?.stage || 'NUEVO'}));
+}
+
+function HomeView({data}) {
+  const leads = mergePipeline(data.leads, data.pipeline_stages);
+  const closedGanado = data.pipeline_stages.filter(p => p.stage === 'CERRADO_GANADO').length;
+  const contactados = data.pipeline_stages.filter(p => p.stage !== 'NUEVO').length;
+  const closureRate = contactados > 0 ? Math.round((closedGanado / contactados) * 100) : 0;
+  const activos = data.pipeline_stages.filter(p => !['CERRADO_GANADO','CERRADO_PERDIDO','GHOSTED'].includes(p.stage)).length + leads.filter(l => !data.pipeline_stages.find(p => p.lead_id === l.id)).length;
+
+  // WA health
+  const msgs7d = data.whatsapp_send_log.filter(w => new Date(w.sent_at_date) > new Date(Date.now() - 7*86400000)).length;
+  const days = [...new Set(data.whatsapp_send_log.map(w => w.sent_at_date))].length;
+  const today = data.whatsapp_send_log.filter(w => w.sent_at_date === new Date().toISOString().slice(0,10)).length;
+  let risk = 'bajo', color = '#16A34A', msg = 'Protocolo seguro. Envía con tranquilidad.';
+  if (today > 12) { risk = 'alto'; color = '#DC2626'; msg = '⚠️ Más de 12 hoy. Baja a 8-10 para no arriesgar ban.'; }
+  else if (today > 10) { risk = 'medio'; color = '#CA8A04'; msg = 'En el límite. No pases de 12 hoy.'; }
+  if (msgs7d > 70) { risk = 'alto'; color = '#DC2626'; msg = '⚠️ 70+ mensajes en 7 días. Descansa mañana.'; }
+  if (days >= 6) { risk = 'alto'; color = '#DC2626'; msg = '⚠️ 6+ días seguidos. Descansa o banean.'; }
+
+  const hotLeads = data.pipeline_stages.filter(p => ['RESPONDIO_CALIENTE','NEGOCIANDO','OBJECION'].includes(p.stage)).slice(0,3);
+  const followups = data.closer_messages.filter(m => m.message_type && m.message_type.includes('followup')).slice(0,3);
+
+  // Pie chart by country
+  const byCountry = leads.filter(l => l.tipo === 'local' && l.pais).reduce((a,l) => {a[l.pais] = (a[l.pais]||0)+1; return a;}, {});
+  const pieData = Object.entries(byCountry).map(([name, value]) => ({name: name==='US'?'🇺🇸 USA':'🇲🇽 México', value}));
+
+  // Bar chart by stage
+  const byStage = STAGES.map(s => ({stage: STAGE_LABELS[s].slice(0,10), count: data.pipeline_stages.filter(p => p.stage === s).length}));
+
+  return (
+    <div className="space-y-5">
+      <h1 className="text-2xl md:text-3xl font-black">🏠 Dashboard</h1>
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <KpiCard label="Revenue del mes" value={fmtMoney(data.stats.revenue_month_usd)} icon="💰" color="#10B981"/>
+        <KpiCard label="Pipeline potencial" value={fmtMoney(data.stats.pipeline_potential)} icon="🎯" color="#F59E0B"/>
+        <KpiCard label="Tasa de cierre" value={closureRate+'%'} icon="📈" color="#0EA5E9"/>
+        <KpiCard label="Leads activos" value={activos} icon="🔥" color="#EF4444"/>
+      </div>
+      <div className="grid md:grid-cols-2 gap-4">
+        <div className="card p-5">
+          <div className="flex items-center justify-between mb-3"><h3 className="font-bold">📱 WhatsApp Health</h3><span className="badge" style={{background:color+'22',color}}>{risk.toUpperCase()}</span></div>
+          <div className="flex gap-4 mb-3">
+            <div className="text-center"><div className="text-2xl font-black">{today}</div><div className="text-xs text-slate-500">hoy</div></div>
+            <div className="text-center"><div className="text-2xl font-black">{msgs7d}</div><div className="text-xs text-slate-500">7 días</div></div>
+            <div className="text-center"><div className="text-2xl font-black">{days}</div><div className="text-xs text-slate-500">días activos</div></div>
+          </div>
+          <div className="text-sm rounded-lg p-3" style={{background:color+'15',color:'#0F172A',borderLeft:'3px solid '+color}}>{msg}</div>
+        </div>
+        <div className="card p-5">
+          <h3 className="font-bold mb-3">🔥 Top leads calientes</h3>
+          {hotLeads.length === 0 && <div className="text-sm text-slate-400 italic">Sin leads calientes aún. Cuando alguno responda con interés, aparecerá aquí.</div>}
+          {hotLeads.map(l => (
+            <div key={l.lead_id} className="py-2 border-b border-slate-100 last:border-0 flex items-center justify-between gap-2">
+              <div className="min-w-0 flex-1"><div className="font-semibold text-sm truncate">{l.nombre}</div><div className="text-xs text-slate-500 truncate">{l.plataforma_ciudad}</div></div>
+              <span className={'badge stage-'+l.stage}>{STAGE_LABELS[l.stage]}</span>
+            </div>
+          ))}
+        </div>
+        <div className="card p-5">
+          <h3 className="font-bold mb-3">🌍 Leads por país</h3>
+          {pieData.length > 0 ? (
+            <ResponsiveContainer width="100%" height={180}>
+              <PieChart><Pie data={pieData} dataKey="value" nameKey="name" outerRadius={70} label>
+                {pieData.map((_,i) => <Cell key={i} fill={['#0EA5E9','#F59E0B'][i%2]}/>)}</Pie>
+                <Tooltip/><Legend/></PieChart>
+            </ResponsiveContainer>
+          ) : <div className="text-sm text-slate-400">Sin datos</div>}
+        </div>
+        <div className="card p-5">
+          <h3 className="font-bold mb-3">📊 Pipeline por etapa</h3>
+          <ResponsiveContainer width="100%" height={180}>
+            <BarChart data={byStage}><XAxis dataKey="stage" fontSize={9} angle={-35} textAnchor="end" height={60}/><YAxis fontSize={10}/><Tooltip/><Bar dataKey="count" fill="#0EA5E9" radius={[4,4,0,0]}/></BarChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+function LeadDrawer({lead, pipeline, closerMsgs, onClose, onStageChange, onAddCaso}) {
+  const [stage, setStage] = useState(lead.stage || 'NUEVO');
+  const [notes, setNotes] = useState(lead.notas || pipeline?.notes || '');
+  const [showCloseModal, setShowCloseModal] = useState(false);
+  const [amount, setAmount] = useState(lead.ticket_estimado || 797);
+  const leadCloserMsgs = closerMsgs.filter(m => m.lead_id === lead.id);
+  const photos = Array.isArray(lead.photo_urls) ? lead.photo_urls : [];
+
+  const handleStage = (newStage) => {
+    setStage(newStage);
+    onStageChange(lead.id, newStage);
+    if (newStage === 'CERRADO_GANADO') setShowCloseModal(true);
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex">
+      <div className="drawer-backdrop flex-1" onClick={onClose}></div>
+      <div className="w-full max-w-2xl bg-white overflow-y-auto shadow-2xl">
+        <div className="sticky top-0 bg-white border-b border-slate-200 px-5 py-4 flex items-center justify-between z-10">
+          <div className="min-w-0"><div className="text-xs text-slate-500">{flag(lead.pais)} {lead.plataforma_ciudad} · {lead.nicho}</div><h2 className="text-xl font-black truncate">{lead.nombre}</h2></div>
+          <button onClick={onClose} className="text-2xl text-slate-400 hover:text-slate-900 px-2">×</button>
+        </div>
+        <div className="p-5 space-y-5">
+          <div className="flex flex-wrap gap-2 items-center">
+            <span className={'badge stage-'+stage}>{STAGE_LABELS[stage]}</span>
+            <select value={stage} onChange={e=>handleStage(e.target.value)} className="text-sm px-3 py-1.5 border border-slate-300 rounded-lg bg-white">
+              {STAGES.map(s => <option key={s} value={s}>{STAGE_LABELS[s]}</option>)}
+            </select>
+            {lead.rating && <span className="text-sm text-slate-600">⭐ {lead.rating} ({lead.reviews_count} reseñas)</span>}
+            {lead.ticket_estimado && <span className="badge" style={{background:'#ECFDF5',color:'#065F46'}}>💰 {fmtMoney(lead.ticket_estimado)}</span>}
+          </div>
+          <div className="flex gap-2 flex-wrap">
+            {lead.whatsapp && <a href={lead.whatsapp} target="_blank" className="btn-primary">💬 WhatsApp</a>}
+            {lead.demo_url && <a href={lead.demo_url} target="_blank" className="btn-secondary">🖥️ Ver demo</a>}
+            {lead.link && <a href={lead.link} target="_blank" className="btn-outline">🔗 Fuente</a>}
+            <button onClick={()=>handleStage('CERRADO_GANADO')} className="btn-primary">✅ Marcar Cerrado</button>
+          </div>
+          {photos.length > 0 && (
+            <div><h3 className="font-bold text-sm mb-2">📷 Fotos reales del negocio</h3>
+              <div className="grid grid-cols-3 gap-2">{photos.slice(0,6).map((u,i) => <img key={i} src={u} className="aspect-square object-cover rounded-lg" loading="lazy"/>)}</div>
+            </div>
+          )}
+          {lead.propuesta && (
+            <div><h3 className="font-bold text-sm mb-2">📋 Auditoría</h3>
+              <div className="card p-3 text-sm whitespace-pre-wrap text-slate-700">{lead.propuesta}</div>
+            </div>
+          )}
+          {lead.mensaje_whatsapp && (
+            <div><h3 className="font-bold text-sm mb-2">💬 Mensaje inicial (copy-paste)</h3>
+              <div className="card p-3 text-sm whitespace-pre-wrap text-slate-700 bg-emerald-50 border border-emerald-200">{lead.mensaje_whatsapp}</div>
+              <button onClick={()=>{navigator.clipboard.writeText(lead.mensaje_whatsapp);toast('📋 Copiado');}} className="btn-outline text-xs mt-2">📋 Copiar</button>
+            </div>
+          )}
+          {lead.pitch_script_text && (
+            <div><h3 className="font-bold text-sm mb-2">🎙️ Script de pitch de voz</h3>
+              <div className="card p-3 text-sm whitespace-pre-wrap text-slate-700 bg-purple-50 border border-purple-200 font-mono">{lead.pitch_script_text}</div>
+              <div className="text-xs text-purple-700 mt-2">💡 Copia a <a href="https://elevenlabs.io" target="_blank" className="underline">ElevenLabs</a> o grábate tú mismo</div>
+            </div>
+          )}
+          {leadCloserMsgs.length > 0 && (
+            <div><h3 className="font-bold text-sm mb-2">📬 Mensajes de seguimiento ({leadCloserMsgs.length})</h3>
+              {leadCloserMsgs.map(m => (
+                <div key={m.id} className="card p-3 text-sm mb-2 bg-sky-50 border border-sky-200"><div className="text-xs text-sky-700 font-bold mb-1">{m.message_type} · {m.scheduled_send_date}</div><div className="text-slate-700 whitespace-pre-wrap">{m.message_text}</div>{m.wa_link && <a href={m.wa_link} target="_blank" className="btn-primary inline-block mt-2 text-xs">💬 Enviar</a>}</div>
+              ))}
+            </div>
+          )}
+          {lead.demo_url && (
+            <div><h3 className="font-bold text-sm mb-2">🖥️ Preview demo web</h3>
+              <iframe src={lead.demo_url} className="w-full h-80 rounded-lg border border-slate-200"/>
+            </div>
+          )}
+          <div><h3 className="font-bold text-sm mb-2">📝 Notas</h3>
+            <textarea value={notes} onChange={e=>setNotes(e.target.value)} onBlur={()=>queueUpdate('NOTES', {lead_id:lead.id, notes})} className="w-full min-h-[100px] p-3 border border-slate-300 rounded-lg text-sm" placeholder="Notas internas sobre este lead…"/>
+          </div>
+          {pipeline?.stage_entered_at && (
+            <div className="text-xs text-slate-500 pt-3 border-t border-slate-100">
+              <div>📅 Última actualización: {fmtDate(pipeline.updated_at)}</div>
+              {pipeline.last_message_sent_at && <div>📤 Último mensaje enviado: {fmtDate(pipeline.last_message_sent_at)}</div>}
+            </div>
+          )}
+        </div>
+        {showCloseModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 drawer-backdrop">
+            <div className="card p-6 max-w-sm w-full">
+              <h3 className="font-black text-lg mb-3">✅ Cerrar como ganado</h3>
+              <div className="text-sm text-slate-600 mb-3">¿Cuánto cobraste por este cliente (USD)?</div>
+              <input type="number" value={amount} onChange={e=>setAmount(+e.target.value)} className="w-full p-3 border border-slate-300 rounded-lg mb-4"/>
+              <div className="flex gap-2"><button onClick={()=>setShowCloseModal(false)} className="btn-outline flex-1">Cancelar</button>
+                <button onClick={()=>{onAddCaso(lead, amount); setShowCloseModal(false);}} className="btn-primary flex-1">✅ Confirmar</button></div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+
+function LocalView({data, onStageChange, onAddCaso}) {
+  const [selected, setSelected] = useState(null);
+  const [fPais, setFPais] = useState('all');
+  const [fNicho, setFNicho] = useState('all');
+  const [fEstado, setFEstado] = useState('all');
+  const [search, setSearch] = useState('');
+
+  const leads = mergePipeline(data.leads.filter(l => l.tipo === 'local'), data.pipeline_stages);
+  const nichos = [...new Set(leads.map(l => l.nicho).filter(Boolean))];
+  const filtered = leads.filter(l => {
+    if (fPais !== 'all' && l.pais !== fPais) return false;
+    if (fNicho !== 'all' && l.nicho !== fNicho) return false;
+    if (fEstado !== 'all' && l.stage !== fEstado) return false;
+    if (search && !l.nombre.toLowerCase().includes(search.toLowerCase())) return false;
+    return true;
+  });
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between flex-wrap gap-3">
+        <h1 className="text-2xl md:text-3xl font-black">🏖️ Leads Locales <span className="text-slate-400 text-base font-normal">({filtered.length}/{leads.length})</span></h1>
+      </div>
+      <div className="card p-4 flex flex-wrap gap-2 items-center">
+        <input placeholder="🔍 Buscar por nombre…" value={search} onChange={e=>setSearch(e.target.value)} className="px-3 py-2 border border-slate-300 rounded-lg text-sm flex-1 min-w-[160px]"/>
+        <select value={fPais} onChange={e=>setFPais(e.target.value)} className="px-3 py-2 border border-slate-300 rounded-lg text-sm">
+          <option value="all">Todos países</option><option value="US">🇺🇸 USA</option><option value="MX">🇲🇽 México</option>
+        </select>
+        <select value={fNicho} onChange={e=>setFNicho(e.target.value)} className="px-3 py-2 border border-slate-300 rounded-lg text-sm">
+          <option value="all">Todos nichos</option>{nichos.map(n => <option key={n} value={n}>{n}</option>)}
+        </select>
+        <select value={fEstado} onChange={e=>setFEstado(e.target.value)} className="px-3 py-2 border border-slate-300 rounded-lg text-sm">
+          <option value="all">Todos estados</option>{STAGES.map(s => <option key={s} value={s}>{STAGE_LABELS[s]}</option>)}
+        </select>
+      </div>
+      <div className="card overflow-x-auto">
+        <table className="w-full text-sm">
+          <thead className="bg-slate-50 text-xs text-slate-500 uppercase"><tr>
+            <th className="px-3 py-2 text-left">País</th><th className="px-3 py-2 text-left">Negocio</th>
+            <th className="px-3 py-2 text-left hidden md:table-cell">Rating</th>
+            <th className="px-3 py-2 text-left hidden lg:table-cell">Ticket</th>
+            <th className="px-3 py-2 text-left">Estado</th>
+            <th className="px-3 py-2 text-center">Acciones</th>
+          </tr></thead>
+          <tbody>
+            {filtered.map(l => (
+              <tr key={l.id} onClick={()=>setSelected(l)} className="border-t border-slate-100 hover:bg-sky-50 cursor-pointer">
+                <td className="px-3 py-3 flag">{flag(l.pais)}</td>
+                <td className="px-3 py-3"><div className="font-semibold">{l.nombre}</div><div className="text-xs text-slate-500">{l.plataforma_ciudad} · {l.nicho}</div></td>
+                <td className="px-3 py-3 hidden md:table-cell">{l.rating?'⭐ '+l.rating+' ('+l.reviews_count+')':'—'}</td>
+                <td className="px-3 py-3 hidden lg:table-cell font-bold text-emerald-600">{fmtMoney(l.ticket_estimado)}</td>
+                <td className="px-3 py-3"><span className={'badge stage-'+l.stage}>{STAGE_LABELS[l.stage]}</span></td>
+                <td className="px-3 py-3 text-center" onClick={e=>e.stopPropagation()}>
+                  <div className="flex gap-1 justify-center">
+                    {l.whatsapp && <a href={l.whatsapp} target="_blank" className="text-emerald-600 hover:text-emerald-800 text-lg" title="WhatsApp">💬</a>}
+                    {l.demo_url && <a href={l.demo_url} target="_blank" className="text-amber-600 hover:text-amber-800 text-lg" title="Ver demo">🖥️</a>}
+                  </div>
+                </td>
+              </tr>
+            ))}
+            {filtered.length === 0 && <tr><td colSpan="6" className="px-3 py-8 text-center text-slate-400 italic">Sin resultados para los filtros seleccionados</td></tr>}
+          </tbody>
+        </table>
+      </div>
+      {selected && <LeadDrawer lead={selected} pipeline={data.pipeline_stages.find(p=>p.lead_id===selected.id)} closerMsgs={data.closer_messages} onClose={()=>setSelected(null)} onStageChange={onStageChange} onAddCaso={onAddCaso}/>}
+    </div>
+  );
+}
+
+function FreelanceView({data, onStageChange, onAddCaso}) {
+  const [selected, setSelected] = useState(null);
+  const leads = mergePipeline(data.leads.filter(l => l.tipo === 'freelance'), data.pipeline_stages);
+  return (
+    <div className="space-y-4">
+      <h1 className="text-2xl md:text-3xl font-black">💼 Leads Freelance <span className="text-slate-400 text-base font-normal">({leads.length})</span></h1>
+      <div className="card overflow-x-auto">
+        <table className="w-full text-sm">
+          <thead className="bg-slate-50 text-xs text-slate-500 uppercase"><tr>
+            <th className="px-3 py-2 text-left">Plataforma</th><th className="px-3 py-2 text-left">Título</th>
+            <th className="px-3 py-2 text-center hidden md:table-cell">Idioma</th>
+            <th className="px-3 py-2 text-center">Score</th><th className="px-3 py-2 text-left">Estado</th>
+          </tr></thead>
+          <tbody>
+            {leads.map(l => (
+              <tr key={l.id} onClick={()=>setSelected(l)} className="border-t border-slate-100 hover:bg-sky-50 cursor-pointer">
+                <td className="px-3 py-3 text-xs text-slate-600">{l.plataforma_ciudad}</td>
+                <td className="px-3 py-3"><div className="font-semibold truncate max-w-md">{l.nombre}</div><div className="text-xs text-slate-500">{l.servicio_pedido}</div></td>
+                <td className="px-3 py-3 text-center hidden md:table-cell"><span className="badge" style={{background:'#E0F2FE',color:'#075985'}}>{l.idioma}</span></td>
+                <td className="px-3 py-3 text-center"><span className="badge" style={{background: l.score>=7?'#BBF7D0':l.score>=5?'#FEF3C7':'#E5E7EB', color: l.score>=7?'#166534':l.score>=5?'#92400E':'#374151'}}>{l.score}/10</span></td>
+                <td className="px-3 py-3"><span className={'badge stage-'+l.stage}>{STAGE_LABELS[l.stage]}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {selected && <LeadDrawer lead={selected} pipeline={data.pipeline_stages.find(p=>p.lead_id===selected.id)} closerMsgs={data.closer_messages} onClose={()=>setSelected(null)} onStageChange={onStageChange} onAddCaso={onAddCaso}/>}
+    </div>
+  );
+}
+
+
+function CasosView({data, onAddCaso}) {
+  const [showAdd, setShowAdd] = useState(false);
+  const [f, setF] = useState({nombre_cliente:'',ciudad:'',nicho:'',pais:'MX',resultado_concreto:'',monto_usd:797,testimonio_corto:''});
+  const casos = data.casos_exito;
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between flex-wrap gap-3">
+        <h1 className="text-2xl md:text-3xl font-black">🏆 Casos de Éxito <span className="text-slate-400 text-base font-normal">({casos.length})</span></h1>
+        <button onClick={()=>setShowAdd(true)} className="btn-primary">+ Agregar caso</button>
+      </div>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {casos.map(c => (
+          <div key={c.id} className="card p-4 space-y-2">
+            <div className="flex items-start justify-between">
+              <div><div className="flex items-center gap-2 mb-1"><span className="flag">{c.pais==='GENERIC'?'🌐':flag(c.pais)}</span><span className="font-bold">{c.nombre_cliente}</span></div>
+              <div className="text-xs text-slate-500">{c.ciudad} · {c.nicho}</div></div>
+              {c.pais === 'GENERIC' && <span className="badge" style={{background:'#E5E7EB',color:'#374151'}}>Industria</span>}
+              {c.pais !== 'GENERIC' && <span className="badge" style={{background:'#BBF7D0',color:'#166534'}}>REAL</span>}
+            </div>
+            <div className="text-sm font-semibold text-emerald-700">{c.resultado_concreto}</div>
+            {c.testimonio_corto && <div className="text-xs text-slate-600 italic">"{c.testimonio_corto}"</div>}
+            <div className="flex items-center justify-between text-xs text-slate-500 pt-2 border-t border-slate-100">
+              {c.monto_usd && <span className="font-bold text-amber-600">{fmtMoney(c.monto_usd)}</span>}
+              <span>Usado {c.usado_count}x</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      {showAdd && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 drawer-backdrop">
+          <div className="card p-6 max-w-md w-full max-h-[90vh] overflow-y-auto">
+            <h3 className="font-black text-lg mb-4">+ Agregar caso de éxito</h3>
+            <div className="space-y-3">
+              <input placeholder="Nombre del cliente" value={f.nombre_cliente} onChange={e=>setF({...f,nombre_cliente:e.target.value})} className="w-full p-2.5 border border-slate-300 rounded-lg text-sm"/>
+              <input placeholder="Ciudad" value={f.ciudad} onChange={e=>setF({...f,ciudad:e.target.value})} className="w-full p-2.5 border border-slate-300 rounded-lg text-sm"/>
+              <select value={f.nicho} onChange={e=>setF({...f,nicho:e.target.value})} className="w-full p-2.5 border border-slate-300 rounded-lg text-sm">
+                <option value="">Nicho…</option><option>hotel</option><option>tour operator</option><option>charter fishing</option><option>dive shop</option><option>restaurante</option><option>spa wellness</option><option>wedding planner</option>
+              </select>
+              <select value={f.pais} onChange={e=>setF({...f,pais:e.target.value})} className="w-full p-2.5 border border-slate-300 rounded-lg text-sm">
+                <option value="MX">🇲🇽 México</option><option value="US">🇺🇸 USA</option>
+              </select>
+              <textarea placeholder="Resultado concreto (ej: +30% reservas directas en 45 días)" value={f.resultado_concreto} onChange={e=>setF({...f,resultado_concreto:e.target.value})} className="w-full p-2.5 border border-slate-300 rounded-lg text-sm min-h-[70px]"/>
+              <input type="number" placeholder="Monto USD" value={f.monto_usd} onChange={e=>setF({...f,monto_usd:+e.target.value})} className="w-full p-2.5 border border-slate-300 rounded-lg text-sm"/>
+              <textarea placeholder="Testimonio corto (opcional)" value={f.testimonio_corto} onChange={e=>setF({...f,testimonio_corto:e.target.value})} className="w-full p-2.5 border border-slate-300 rounded-lg text-sm min-h-[60px]"/>
+            </div>
+            <div className="flex gap-2 mt-4"><button onClick={()=>setShowAdd(false)} className="btn-outline flex-1">Cancelar</button>
+              <button onClick={()=>{onAddCaso(null, f.monto_usd, f); setShowAdd(false); setF({nombre_cliente:'',ciudad:'',nicho:'',pais:'MX',resultado_concreto:'',monto_usd:797,testimonio_corto:''});}} disabled={!f.nombre_cliente||!f.resultado_concreto} className="btn-primary flex-1 disabled:opacity-50">Guardar</button></div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function DemosView({data}) {
+  const demos = data.leads.filter(l => l.demo_url);
+  const copy = (url) => {navigator.clipboard.writeText(url);toast('📋 Link copiado');};
+  return (
+    <div className="space-y-4">
+      <h1 className="text-2xl md:text-3xl font-black">🖥️ Demos Web <span className="text-slate-400 text-base font-normal">({demos.length})</span></h1>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {demos.map(d => (
+          <div key={d.id} className="card overflow-hidden">
+            <div className="aspect-video bg-slate-100 overflow-hidden">
+              <img src={'https://image.thum.io/get/width/600/crop/800/' + encodeURIComponent(d.demo_url)} className="w-full h-full object-cover" loading="lazy"/>
+            </div>
+            <div className="p-4">
+              <div className="flex items-center gap-2 mb-1"><span className="flag">{flag(d.pais)}</span><div className="font-bold truncate">{d.nombre}</div></div>
+              <div className="text-xs text-slate-500 mb-3">{d.plataforma_ciudad} · {d.nicho}</div>
+              <div className="flex gap-2">
+                <button onClick={()=>copy(d.demo_url)} className="btn-outline text-xs flex-1">📋 Copiar link</button>
+                <a href={d.demo_url} target="_blank" className="btn-secondary text-xs flex-1 text-center">🔗 Abrir</a>
+              </div>
+            </div>
+          </div>
+        ))}
+        {demos.length === 0 && <div className="col-span-full text-center py-12 text-slate-400">Aún no hay demos publicadas. El motor generará 5 demos nuevas cada día.</div>}
+      </div>
+    </div>
+  );
+}
+
+
+function AgendaView({data, onStageChange}) {
+  const today = new Date().toISOString().slice(0,10);
+  const hot = mergePipeline(data.leads.filter(l => l.tipo==='local'), data.pipeline_stages).filter(l => ['RESPONDIO_CALIENTE','NEGOCIANDO','OBJECION'].includes(l.stage));
+  const newToday = data.leads.filter(l => l.fecha_captura === today);
+  const fup3 = data.closer_messages.filter(m => m.message_type?.includes('day3') || m.message_type?.includes('checkin_day1'));
+  const fup7 = data.closer_messages.filter(m => m.message_type?.includes('day7') || m.message_type?.includes('breakup'));
+  const upsells = data.closer_messages.filter(m => m.message_type?.includes('upsell'));
+  const Section = ({title, items, empty}) => (
+    <div className="card p-4">
+      <h3 className="font-bold mb-3">{title} <span className="text-slate-400 text-sm">({items.length})</span></h3>
+      {items.length === 0 ? <div className="text-sm text-slate-400 italic">{empty}</div> : items.map((it,i) => (
+        <div key={i} className="py-3 border-b border-slate-100 last:border-0">
+          <div className="flex items-start justify-between gap-2">
+            <div className="min-w-0 flex-1"><div className="font-semibold text-sm truncate">{it.nombre || it.lead_id}</div>
+              {it.plataforma_ciudad && <div className="text-xs text-slate-500">{it.plataforma_ciudad}</div>}
+              {it.message_text && <div className="text-xs text-slate-600 mt-1 whitespace-pre-wrap">{it.message_text.slice(0,150)}{it.message_text.length>150?'…':''}</div>}</div>
+            {(it.whatsapp || it.wa_link) && <a href={it.wa_link || it.whatsapp} target="_blank" className="btn-primary text-xs shrink-0">📤 Enviar</a>}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+  return (
+    <div className="space-y-4">
+      <h1 className="text-2xl md:text-3xl font-black">📅 Agenda Hoy</h1>
+      <div className="grid md:grid-cols-2 gap-4">
+        <Section title="🔥 Calientes a cerrar" items={hot} empty="Sin leads calientes aún"/>
+        <Section title="🌅 Nuevos del día" items={newToday} empty="Sin leads nuevos hoy"/>
+        <Section title="🔄 Follow-ups" items={fup3} empty="Sin follow-ups día +3"/>
+        <Section title="🔄 Breakups +7" items={fup7} empty="Sin breakups día +7"/>
+        <Section title="💸 Upsells pendientes" items={upsells} empty="Sin upsells pendientes"/>
+      </div>
+    </div>
+  );
+}
+
+function AnalyticsView({data}) {
+  const pipeline = data.pipeline_stages;
+  const leads = mergePipeline(data.leads, pipeline);
+  // By city
+  const byCity = {};
+  leads.filter(l=>l.tipo==='local').forEach(l => {if(l.plataforma_ciudad){byCity[l.plataforma_ciudad]=(byCity[l.plataforma_ciudad]||0)+1;}});
+  const cityData = Object.entries(byCity).sort((a,b)=>b[1]-a[1]).slice(0,10).map(([city,c])=>({city, count:c}));
+  // By nicho closure (using pipeline cerrados ganados)
+  const cerrados = pipeline.filter(p=>p.stage==='CERRADO_GANADO');
+  // Ticket avg by pais
+  const avgTicketUS = leads.filter(l=>l.tipo==='local'&&l.pais==='US').reduce((a,l,_,arr)=>a+(l.ticket_estimado||0)/arr.length,0);
+  const avgTicketMX = leads.filter(l=>l.tipo==='local'&&l.pais==='MX').reduce((a,l,_,arr)=>a+(l.ticket_estimado||0)/arr.length,0);
+  // Funnel
+  const funnel = [
+    {stage:'Total leads', count:pipeline.length + leads.filter(l=>!pipeline.find(p=>p.lead_id===l.id)).length},
+    {stage:'Contactados', count:pipeline.length},
+    {stage:'Respondieron', count:pipeline.filter(p=>['RESPONDIO_FRIO','RESPONDIO_CALIENTE','DEMO_ENVIADA','NEGOCIANDO','OBJECION','CERRADO_GANADO','CERRADO_PERDIDO'].includes(p.stage)).length},
+    {stage:'Demo enviada', count:pipeline.filter(p=>['DEMO_ENVIADA','NEGOCIANDO','OBJECION','CERRADO_GANADO'].includes(p.stage)).length},
+    {stage:'Cerrados ganados', count:cerrados.length}
+  ];
+  return (
+    <div className="space-y-4">
+      <h1 className="text-2xl md:text-3xl font-black">📊 Analytics</h1>
+      <div className="grid md:grid-cols-2 gap-4">
+        <div className="card p-5"><h3 className="font-bold mb-3">🏙️ Top 10 ciudades</h3>
+          <ResponsiveContainer width="100%" height={260}><BarChart data={cityData} layout="vertical"><XAxis type="number" fontSize={10}/><YAxis type="category" dataKey="city" width={110} fontSize={10}/><Tooltip/><Bar dataKey="count" fill="#0EA5E9" radius={[0,4,4,0]}/></BarChart></ResponsiveContainer>
+        </div>
+        <div className="card p-5"><h3 className="font-bold mb-3">💰 Ticket promedio por país</h3>
+          <div className="space-y-4 py-6">
+            <div><div className="flex justify-between text-sm mb-1"><span>🇺🇸 USA</span><span className="font-bold">{fmtMoney(Math.round(avgTicketUS))}</span></div><div className="h-3 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-brand" style={{width:Math.min(100,avgTicketUS/2500*100)+'%'}}></div></div></div>
+            <div><div className="flex justify-between text-sm mb-1"><span>🇲🇽 México</span><span className="font-bold">{fmtMoney(Math.round(avgTicketMX))}</span></div><div className="h-3 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-accent" style={{width:Math.min(100,avgTicketMX/2500*100)+'%'}}></div></div></div>
+          </div>
+        </div>
+        <div className="card p-5 md:col-span-2"><h3 className="font-bold mb-3">🎯 Funnel de conversión</h3>
+          <div className="space-y-2">
+            {funnel.map(f => (
+              <div key={f.stage} className="flex items-center gap-3">
+                <div className="w-40 text-sm font-semibold">{f.stage}</div>
+                <div className="flex-1 h-8 bg-slate-100 rounded-lg overflow-hidden relative">
+                  <div className="h-full bg-gradient-to-r from-brand to-accent rounded-lg" style={{width:(f.count/Math.max(funnel[0].count,1)*100)+'%'}}></div>
+                  <div className="absolute inset-0 flex items-center px-3 text-xs font-bold text-white drop-shadow">{f.count}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+function SettingsView({data, onSettingChange}) {
+  const s = data.settings;
+  const queue = getQueue();
+  const syncText = queue.length === 0 ? '' :
+    'SYNC_QUEUE from dashboard\n\n' + queue.map(q => q.type + ': ' + JSON.stringify(q.payload)).join('\n\n');
+  const mailtoHref = 'mailto:robertmartinez.og@gmail.com?subject=' + encodeURIComponent('[DASHBOARD SYNC] ' + queue.length + ' updates') + '&body=' + encodeURIComponent(syncText);
+
+  return (
+    <div className="space-y-4">
+      <h1 className="text-2xl md:text-3xl font-black">⚙️ Ajustes</h1>
+      <div className="card p-5 bg-amber-50 border border-amber-200">
+        <h3 className="font-bold mb-2">🔄 Sincronizar cambios pendientes ({queue.length})</h3>
+        <p className="text-sm text-slate-700 mb-3">El dashboard es de solo-lectura contra la DB del agente. Los cambios de estado, notas y casos nuevos que haces aquí quedan en cola local. Envíalos al agente por email para que los procese en el próximo run (formato ya listo):</p>
+        {queue.length > 0 && <>
+          <pre className="text-xs bg-white border border-amber-200 p-3 rounded mb-3 max-h-48 overflow-auto">{syncText}</pre>
+          <div className="flex gap-2 flex-wrap">
+            <a href={mailtoHref} className="btn-primary">📧 Enviar por email</a>
+            <button onClick={()=>{navigator.clipboard.writeText(syncText);toast('📋 Copiado');}} className="btn-outline">📋 Copiar texto</button>
+            <button onClick={()=>{clearQueue();toast('🗑️ Cola limpiada');location.reload();}} className="btn-outline">🗑️ Limpiar cola</button>
+          </div>
+        </>}
+        {queue.length === 0 && <div className="text-sm text-slate-500 italic">No hay cambios pendientes de sincronizar</div>}
+      </div>
+      <div className="card p-5">
+        <h3 className="font-bold mb-3">🏙️ Ciudades activas</h3>
+        <div className="flex flex-wrap gap-2">
+          {(s.ciudades_activas||'').split(',').map(c => c.trim()).filter(Boolean).map(c => <span key={c} className="badge" style={{background:'#E0F2FE',color:'#075985'}}>{c}</span>)}
+        </div>
+        <div className="text-xs text-slate-500 mt-3">Editable vía SQL directo en la DB del agente — próxima versión permitirá editar desde aquí.</div>
+      </div>
+      <div className="card p-5">
+        <h3 className="font-bold mb-3">🎯 Nichos activos</h3>
+        <div className="flex flex-wrap gap-2">
+          {(s.nichos_activos||'').split(',').map(n => n.trim()).filter(Boolean).map(n => <span key={n} className="badge" style={{background:'#FEF3C7',color:'#92400E'}}>{n}</span>)}
+        </div>
+      </div>
+      <div className="card p-5">
+        <h3 className="font-bold mb-3">📋 Datos del usuario</h3>
+        <div className="text-sm space-y-1">
+          <div><b>Nombre comercial:</b> {s.nombre_comercial}</div>
+          <div><b>Horario preferido:</b> {s.horario_preferido}</div>
+          <div><b>Contraseña dashboard:</b> <code className="bg-slate-100 px-2 py-0.5 rounded text-xs">{s.dashboard_password}</code></div>
+        </div>
+      </div>
+      <div className="card p-5">
+        <h3 className="font-bold mb-3">📦 Snapshot</h3>
+        <div className="text-sm">Generado: <b>{new Date(data.generated_at).toLocaleString('es')}</b></div>
+        <div className="text-xs text-slate-500 mt-1">El snapshot se regenera cada vez que el agente corre (diario 7am Colombia). Auto-refresh al abrir el dashboard.</div>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [data, setData] = useState(null);
+  const [active, setActive] = useState('home');
+  const [logged, setLogged] = useState(false);
+
+  useEffect(() => {
+    fetch('./data.json?t=' + Date.now()).then(r => r.json()).then(setData).catch(() => setData({error: true}));
+  }, []);
+
+  if (!data) return <div className="min-h-screen flex items-center justify-center"><div className="text-slate-400">🌊 Cargando…</div></div>;
+  if (data.error) return <div className="min-h-screen flex items-center justify-center p-4"><div className="card p-6 max-w-md"><h2 className="font-bold text-lg mb-2">⚠️ Error cargando datos</h2><p className="text-sm text-slate-600">No se pudo leer data.json. Verifica que el archivo exista en el repo.</p></div></div>;
+
+  if (!logged) return <Login password={data.settings.dashboard_password || 'coastal2026'} onLogin={()=>setLogged(true)}/>;
+
+  const onStageChange = (leadId, stage) => queueUpdate('STAGE_UPDATE', {lead_id: leadId, new_stage: stage});
+  const onAddCaso = (lead, amount, extra) => {
+    const payload = extra || {nombre_cliente: lead.nombre, ciudad: lead.plataforma_ciudad, nicho: lead.nicho, pais: lead.pais, resultado_concreto: 'Cerrado en ' + new Date().toLocaleDateString('es'), monto_usd: amount, testimonio_corto: ''};
+    queueUpdate('CASO_EXITO', payload);
+    if (lead) queueUpdate('STAGE_UPDATE', {lead_id: lead.id, new_stage: 'CERRADO_GANADO', closed_amount_usd: amount});
+  };
+  const onSettingChange = (k, v) => queueUpdate('SETTING', {key: k, value: v});
+
+  const V = {
+    home: <HomeView data={data}/>,
+    local: <LocalView data={data} onStageChange={onStageChange} onAddCaso={onAddCaso}/>,
+    freelance: <FreelanceView data={data} onStageChange={onStageChange} onAddCaso={onAddCaso}/>,
+    casos: <CasosView data={data} onAddCaso={onAddCaso}/>,
+    demos: <DemosView data={data}/>,
+    agenda: <AgendaView data={data} onStageChange={onStageChange}/>,
+    analytics: <AnalyticsView data={data}/>,
+    settings: <SettingsView data={data} onSettingChange={onSettingChange}/>
+  }[active];
+
+  return (
+    <div className="min-h-screen">
+      <Sidebar active={active} setActive={setActive} stats={data.stats}/>
+      <main className="md:pl-60 pb-20 md:pb-8"><div className="max-w-6xl mx-auto p-4 md:p-6">{V}</div></main>
+      <BottomNav active={active} setActive={setActive}/>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App/>);
+
+</script>
+</body>
+</html>
