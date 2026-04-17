@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ibis Bay Beach Resort</title>
+<meta name="description" content="A laid-back waterfront retreat steps from the Atlantic, built for real rest.">
+<meta property="og:title" content="Ibis Bay Beach Resort">
+<meta property="og:description" content="A laid-back waterfront retreat steps from the Atlantic, built for real rest.">
+<meta property="og:image" content="https://source.unsplash.com/1600x900/?Key%20West%20waterfront%2Cboutique%20beach%20resort">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;}
+.demo-banner{position:fixed;top:0;left:0;right:0;background:#0f172a;color:#fff;padding:10px 16px;z-index:100;text-align:center;font-size:13px;}
+.demo-banner a{color:#60a5fa;text-decoration:underline;}
+.lang-switch{position:fixed;top:50px;right:16px;z-index:99;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-radius:999px;padding:4px;box-shadow:0 4px 20px rgba(0,0,0,0.15);display:flex;gap:2px;}
+.lang-switch button{padding:6px 14px;border-radius:999px;font-weight:700;font-size:12px;border:none;cursor:pointer;transition:all 0.2s;background:transparent;color:#64748b;}
+.lang-switch button.active{background:#0f172a;color:#fff;}
+main{padding-top:50px;}
+</style>
+</head>
+<body class="bg-white text-slate-900">
+<div class="demo-banner">🎨 <b>Demo</b> · <span data-demo-banner-en>Personalized preview for Ibis Bay Beach Resort · Fully customizable · Like it? </span><span data-demo-banner-es hidden>Demo preliminar para Ibis Bay Beach Resort · 100% personalizable · ¿Te gusta? </span><a href="https://wa.me/13052961043">WhatsApp</a></div>
+<div class="lang-switch" role="group" aria-label="Language">
+  <button type="button" data-lang-btn="en">EN</button>
+  <button type="button" data-lang-btn="es">ES</button>
+</div>
+<main>
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0"><img src="https://source.unsplash.com/1600x900/?Key%20West%20waterfront%2Cboutique%20beach%20resort" alt="Hero" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-slate-900/80"></div></div>
+  <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto py-20">
+    <div class="inline-block px-4 py-1.5 rounded-full bg-white/15 backdrop-blur text-xs font-semibold tracking-wide uppercase mb-6 border border-white/20" data-i18n="hero_eyebrow">Waterfront living in Key West, Florida</div>
+    <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6" data-i18n="hero_title">Key West, Right on the Water</h1>
+    <p class="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto" data-i18n="hero_subtitle">A laid-back waterfront retreat steps from the Atlantic, built for real rest.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="https://wa.me/13052961043" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-full shadow-lg transition"><span data-i18n="hero_cta_primary">Reserve Your Stay</span></a>
+      <a href="#services" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur border border-white/30 hover:bg-white/20 text-white font-bold rounded-full transition" data-i18n="hero_cta_secondary">Explore the Resort</a>
+    </div>
+    <div class="mt-10 flex items-center justify-center gap-2 text-sm">
+      <span class="text-amber-400 text-lg">★★★★★</span>
+      <span class="text-white/90 font-semibold">4/5</span>
+      <span class="text-white/60">· 4312 <span data-i18n="rating_suffix">reviews on Google</span></span>
+    </div>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-indigo-600 to-purple-700 py-14"><div class="max-w-5xl mx-auto px-6 grid grid-cols-3 gap-6" id="stats-container"></div></section>
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_about">About us</div>
+    <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-8" data-i18n="about_title">Where Key West Slows Down</h2>
+    <div id="about-text" class="prose prose-slate max-w-none text-slate-600 leading-relaxed"></div>
+  </div>
+</section>
+<section id="services" class="py-20 px-6 bg-slate-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14"><div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_services">What we offer</div></div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="services-container"></div>
+  </div>
+</section>
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14"><div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_gallery">Gallery</div></div>
+    <div class="grid md:grid-cols-3 md:grid-rows-2 gap-4"><div class="aspect-[4/3] overflow-hidden rounded-2xl md:col-span-2 md:row-span-2 md:aspect-square group"><img src="https://source.unsplash.com/600x400/?Key%20West%20waterfront&sig=0" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?boutique%20beach%20resort&sig=1" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?Florida%20Keys%20sunset&sig=2" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?tropical%20bay&sig=3" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?beachfront%20cottages&sig=4" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?Key%20West%20waterfront&sig=5" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div></div>
+  </div>
+</section>
+<section class="py-20 px-6 bg-slate-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14"><div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_testimonials">What our guests say</div></div>
+    <div class="grid md:grid-cols-3 gap-6" id="testimonials-container"></div>
+  </div>
+</section>
+<section class="relative py-20 px-6 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-emerald-500 to-emerald-700"></div>
+  <div class="relative max-w-4xl mx-auto text-center text-white">
+    <h2 class="text-4xl md:text-5xl font-black mb-4" data-i18n="cta_banner_title">Your Waterfront Escape Awaits</h2>
+    <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl mx-auto" data-i18n="cta_banner_text">Book direct and get the best rate — no fees, no middlemen, just you and the bay.</p>
+    <a href="https://wa.me/13052961043" class="inline-flex items-center gap-2 px-10 py-4 bg-white text-emerald-700 font-bold rounded-full shadow-xl hover:shadow-2xl transition"><span data-i18n="label_whatsapp">WhatsApp us</span></a>
+  </div>
+</section>
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+    <div>
+      <div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_contact">Contact</div>
+      <div class="space-y-4 text-slate-700 mt-6">
+        <div class="flex items-start gap-3"><span class="text-xl">📍</span><div><div class="font-semibold">Key West</div></div></div>
+        <div class="flex items-start gap-3"><span class="text-xl">📞</span><div><div class="font-semibold" data-i18n="label_phone">Call us</div><a href="tel:+13052961043" class="text-sm text-indigo-600 hover:underline">+13052961043</a></div></div>
+        <div class="flex items-start gap-3"><span class="text-xl">💬</span><div><div class="font-semibold" data-i18n="label_whatsapp">WhatsApp us</div><a href="https://wa.me/13052961043" class="text-sm text-emerald-600 hover:underline">+13052961043</a></div></div>
+        <div class="flex items-start gap-3"><span class="text-xl">⭐</span><div><div class="font-semibold">4/5</div><div class="text-sm">4312 <span data-i18n="rating_suffix">reviews on Google</span></div></div></div>
+      </div>
+    </div>
+    <div class="aspect-video rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+      <iframe src="https://maps.google.com/maps?q=Ibis%20Bay%20Beach%20Resort%20Key%20West&output=embed" class="w-full h-full" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+<footer class="bg-slate-900 text-slate-400 py-10 px-6 text-center text-sm">
+  <div class="font-bold text-white mb-2">Ibis Bay Beach Resort</div>
+  <div class="mb-4">Key West · +13052961043</div>
+  <div class="text-xs opacity-75">© 2026 · <a href="https://wa.me/13052961043" class="text-emerald-400 hover:underline" data-i18n="footer_cta">Book direct at Ibis Bay</a></div>
+</footer>
+</main>
+<script>
+const I18N = {"en":{"hero_eyebrow":"Waterfront living in Key West, Florida","hero_title":"Key West, Right on the Water","hero_subtitle":"A laid-back waterfront retreat steps from the Atlantic, built for real rest.","hero_cta_primary":"Reserve Your Stay","hero_cta_secondary":"Explore the Resort","about_title":"Where Key West Slows Down","about_text":"Ibis Bay Beach Resort sits on the quiet edge of Key West, where the Atlantic breeze hits differently and the pace slows down on purpose. We're not a tower hotel or a party strip — we're a laid-back waterfront retreat where guests come for the hammocks, stay for the sunsets, and leave already planning their next trip back.\n\nOur cottages and rooms open onto the bay, giving you direct access to the water without the crowds. Kayaks, paddleboards, and a private beach are yours to use. The kind of place where you actually unplug.\n\nWith over 4,300 guests sharing their experience, we've built something that speaks for itself: authentic Key West hospitality, unhurried and unpretentious.","cta_banner_title":"Your Waterfront Escape Awaits","cta_banner_text":"Book direct and get the best rate — no fees, no middlemen, just you and the bay.","footer_cta":"Book direct at Ibis Bay","label_phone":"Call us","label_hours":"Hours","label_whatsapp":"WhatsApp us","section_about":"About us","section_services":"What we offer","section_gallery":"Gallery","section_testimonials":"What our guests say","section_contact":"Contact","rating_suffix":"reviews on Google","services":[{"icon":"🌊","title":"Waterfront Rooms & Cottages","desc":"Wake up steps from the bay. Our rooms and cottages open onto the waterfront so the view is never optional."},{"icon":"🛶","title":"Kayaks & Paddleboards Included","desc":"Grab a kayak or paddleboard and head out on your own. No tour group, no schedule — just you and the bay."},{"icon":"🏖️","title":"Private Beach Access","desc":"Our private beach is small by design. Lounge chairs, calm water, and no strangers packed in next to you."},{"icon":"🐠","title":"Local Tips & Water Activities","desc":"We'll point you to the best snorkel spots, sunset cruises, and local bites that don't show up on tourist maps."},{"icon":"☕","title":"Morning Coffee by the Bay","desc":"Start your morning right. Fresh coffee, light bites, and a view of the bay that makes everything taste better."},{"icon":"🌅","title":"Sunset Dock Experience","desc":"Watch the sun drop into the Gulf from our dock. Key West sunsets are legendary — ours come without the Mallory Square crowd."}],"testimonials":[{"name":"Melissa T.","rating":5,"text":"We've done the big resorts in Florida and none of them felt like this. Ibis Bay is quiet, real, and right on the water. The kayaks were a bonus we didn't expect. Already looking at dates for next year."},{"name":"Carlos R.","rating":5,"text":"Came with my wife for our anniversary and it was exactly what we needed. No noise, no chaos — just a beautiful spot in Key West with great staff and a hammock with our name on it."},{"name":"Jamie & Sofía L.","rating":4,"text":"The location is unbeatable for anyone who wants to be near the water without the Duval Street madness. Cozy rooms, helpful staff, and a sunset from the dock that we'll talk about for years."}],"stats":[{"number":"4,312","label":"Guest reviews on Google & TripAdvisor"},{"number":"30+","label":"Years welcoming guests in Key West"},{"number":"0","label":"Steps from the Atlantic shoreline"}]},"es":{"hero_eyebrow":"Frente al agua en Key West, Florida","hero_title":"Key West con los pies en el agua","hero_subtitle":"Un refugio tranquilo frente a la bahía, hecho para descansar de verdad.","hero_cta_primary":"Reservá tu estadía","hero_cta_secondary":"Conocé el resort","about_title":"El Key West que vale la pena","about_text":"Ibis Bay Beach Resort está en el rincón más tranquilo de Key West, donde el mar se toca y el tiempo corre diferente. No somos un hotel de cadena ni un resort con animadores — somos un refugio frente al agua donde la gente viene a descansar de verdad.\n\nNuestras habitaciones y cottages dan directo a la bahía. Kayaks, tablas de paddleboard y playa privada incluidos. Nada de filas, nada de ruido innecesario. El tipo de lugar donde uno realmente desconecta.\n\nCon más de 4.300 huéspedes que ya lo vivieron, lo que ofrecemos habla solo: hospitalidad genuina de Key West, sin apuros ni pretensiones.","cta_banner_title":"Tu escapada frente al agua te espera","cta_banner_text":"Reservá directo y conseguí la mejor tarifa — sin comisiones, sin intermediarios, solo vos y la bahía.","footer_cta":"Reservá directo en Ibis Bay","label_phone":"Llámanos","label_hours":"Horario","label_whatsapp":"Escríbenos por WhatsApp","section_about":"Sobre nosotros","section_services":"Qué ofrecemos","section_gallery":"Galería","section_testimonials":"Lo que dicen nuestros clientes","section_contact":"Contacto","rating_suffix":"reseñas en Google","services":[{"icon":"🌊","title":"Habitaciones frente al agua","desc":"Despertás a metros de la bahía. Habitaciones y cottages con acceso directo al agua, sin tener que buscarla."},{"icon":"🛶","title":"Kayaks y paddleboard incluidos","desc":"Agarrá un kayak o una tabla y salí cuando quieras. Sin grupos, sin horarios fijos — la bahía es tuya."},{"icon":"🏖️","title":"Playa privada exclusiva","desc":"Nuestra playa privada es pequeña a propósito. Reposeras, agua tranquila y sin extraños pegados a vos."},{"icon":"🐠","title":"Actividades y recomendaciones locales","desc":"Te recomendamos los mejores lugares para hacer snorkel, cruceros al atardecer y restaurantes que no están en las guías turísticas."},{"icon":"☕","title":"Desayuno con vista a la bahía","desc":"Empezá el día como se debe. Café recién hecho, algo rico para comer y la bahía de fondo."},{"icon":"🌅","title":"Atardeceres desde el muelle","desc":"Mirá el sol caer desde nuestro muelle. Los atardeceres de Key West son únicos — y los nuestros vienen sin el gentío de Mallory Square."}],"testimonials":[{"name":"Melissa T.","rating":5,"text":"Probamos los grandes resorts de Florida y ninguno se sintió así. Ibis Bay es tranquilo, auténtico y está pegado al agua. Los kayaks fueron un plus que no esperábamos. Ya estamos viendo fechas para el año que viene."},{"name":"Carlos R.","rating":5,"text":"Vine con mi mujer para nuestro aniversario y fue exactamente lo que necesitábamos. Sin ruido, sin caos — un lugar hermoso en Key West con buen trato y una hamaca esperándonos."},{"name":"Jamie & Sofía L.","rating":4,"text":"La ubicación es imbatible si querés estar cerca del agua sin el caos de Duval Street. Habitaciones acogedoras, personal atento y un atardecer desde el muelle que vamos a recordar por años."}],"stats":[{"number":"4,312","label":"Reseñas en Google y TripAdvisor"},{"number":"30+","label":"Años recibiendo viajeros en Key West"},{"number":"0","label":"Pasos del agua"}]}};
+const DEFAULT_LANG = "en";
+function renderStats(lang){
+  const c = document.getElementById('stats-container');
+  c.innerHTML = I18N[lang].stats.map(s => `<div class="text-center"><div class="text-4xl md:text-5xl font-black text-white">${s.number}</div><div class="text-sm text-white/80 mt-1">${s.label}</div></div>`).join('');
+}
+function renderAbout(lang){
+  const c = document.getElementById('about-text');
+  c.innerHTML = I18N[lang].about_text.split(/\n\n+/).map(p => `<p class="mb-4">${p}</p>`).join('');
+}
+function renderServices(lang){
+  const c = document.getElementById('services-container');
+  c.innerHTML = I18N[lang].services.map(s => `<div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition border border-slate-100"><div class="text-4xl mb-3">${s.icon}</div><h3 class="text-lg font-bold text-slate-900 mb-2">${s.title}</h3><p class="text-sm text-slate-600 leading-relaxed">${s.desc}</p></div>`).join('');
+}
+function renderTestimonials(lang){
+  const c = document.getElementById('testimonials-container');
+  c.innerHTML = I18N[lang].testimonials.map(t => {
+    const stars = '★'.repeat(t.rating) + '☆'.repeat(5 - t.rating);
+    return `<figure class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100"><div class="text-amber-400 mb-3">${stars}</div><blockquote class="text-slate-700 text-sm leading-relaxed mb-4">"${t.text}"</blockquote><figcaption class="text-xs font-semibold text-slate-900">— ${t.name}</figcaption></figure>`;
+  }).join('');
+}
+function applyLang(lang){
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.dataset.i18n;
+    if (I18N[lang][k] !== undefined) el.textContent = I18N[lang][k];
+  });
+  document.querySelector('[data-demo-banner-en]').hidden = lang !== 'en';
+  document.querySelector('[data-demo-banner-es]').hidden = lang !== 'es';
+  document.querySelectorAll('[data-lang-btn]').forEach(b => {
+    b.classList.toggle('active', b.dataset.langBtn === lang);
+  });
+  renderStats(lang); renderAbout(lang); renderServices(lang); renderTestimonials(lang);
+  try { localStorage.setItem('demo_lang', lang); } catch(e){}
+}
+let saved = DEFAULT_LANG;
+try { saved = localStorage.getItem('demo_lang') || DEFAULT_LANG; } catch(e){}
+applyLang(saved);
+document.querySelectorAll('[data-lang-btn]').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.langBtn)));
+</script>
+</body>
+</html>
