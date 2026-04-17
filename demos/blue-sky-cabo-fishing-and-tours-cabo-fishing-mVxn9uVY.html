@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blue Sky Cabo Fishing and Tours - Cabo Fishing</title>
+<meta name="description" content="Capitanes expertos, embarcaciones de alto rendimiento y los mejores caladeros de toda Baja.">
+<meta property="og:title" content="Blue Sky Cabo Fishing and Tours - Cabo Fishing">
+<meta property="og:description" content="Capitanes expertos, embarcaciones de alto rendimiento y los mejores caladeros de toda Baja.">
+<meta property="og:image" content="https://source.unsplash.com/1600x900/?sportfishing%20cabo%2Cmarlin%20fishing%20baja">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;}
+.demo-banner{position:fixed;top:0;left:0;right:0;background:#0f172a;color:#fff;padding:10px 16px;z-index:100;text-align:center;font-size:13px;}
+.demo-banner a{color:#60a5fa;text-decoration:underline;}
+.lang-switch{position:fixed;top:50px;right:16px;z-index:99;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-radius:999px;padding:4px;box-shadow:0 4px 20px rgba(0,0,0,0.15);display:flex;gap:2px;}
+.lang-switch button{padding:6px 14px;border-radius:999px;font-weight:700;font-size:12px;border:none;cursor:pointer;transition:all 0.2s;background:transparent;color:#64748b;}
+.lang-switch button.active{background:#0f172a;color:#fff;}
+main{padding-top:50px;}
+</style>
+</head>
+<body class="bg-white text-slate-900">
+<div class="demo-banner">🎨 <b>Demo</b> · <span data-demo-banner-en>Personalized preview for Blue Sky Cabo Fishing and Tours - Cabo Fishing · Fully customizable · Like it? </span><span data-demo-banner-es hidden>Demo preliminar para Blue Sky Cabo Fishing and Tours - Cabo Fishing · 100% personalizable · ¿Te gusta? </span><a href="https://wa.me/14806352965">WhatsApp</a></div>
+<div class="lang-switch" role="group" aria-label="Language">
+  <button type="button" data-lang-btn="en">EN</button>
+  <button type="button" data-lang-btn="es">ES</button>
+</div>
+<main>
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0"><img src="https://source.unsplash.com/1600x900/?sportfishing%20cabo%2Cmarlin%20fishing%20baja" alt="Hero" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-slate-900/80"></div></div>
+  <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto py-20">
+    <div class="inline-block px-4 py-1.5 rounded-full bg-white/15 backdrop-blur text-xs font-semibold tracking-wide uppercase mb-6 border border-white/20" data-i18n="hero_eyebrow">Pesca deportiva de primer nivel en Cabo San Lucas</div>
+    <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6" data-i18n="hero_title">Aquí viven los peces grandes de Baja</h1>
+    <p class="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto" data-i18n="hero_subtitle">Capitanes expertos, embarcaciones de alto rendimiento y los mejores caladeros de toda Baja.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="https://wa.me/14806352965" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-full shadow-lg transition"><span data-i18n="hero_cta_primary">Reserva tu charter</span></a>
+      <a href="#services" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur border border-white/30 hover:bg-white/20 text-white font-bold rounded-full transition" data-i18n="hero_cta_secondary">Conoce nuestra flota</a>
+    </div>
+    <div class="mt-10 flex items-center justify-center gap-2 text-sm">
+      <span class="text-amber-400 text-lg">★★★★★</span>
+      <span class="text-white/90 font-semibold">5/5</span>
+      <span class="text-white/60">· 2768 <span data-i18n="rating_suffix">reseñas en Google</span></span>
+    </div>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-indigo-600 to-purple-700 py-14"><div class="max-w-5xl mx-auto px-6 grid grid-cols-3 gap-6" id="stats-container"></div></section>
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_about">Sobre nosotros</div>
+    <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-8" data-i18n="about_title">Pesca en Cabo como se debe</h2>
+    <div id="about-text" class="prose prose-slate max-w-none text-slate-600 leading-relaxed"></div>
+  </div>
+</section>
+<section id="services" class="py-20 px-6 bg-slate-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14"><div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_services">Qué ofrecemos</div></div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="services-container"></div>
+  </div>
+</section>
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14"><div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_gallery">Galería</div></div>
+    <div class="grid md:grid-cols-3 md:grid-rows-2 gap-4"><div class="aspect-[4/3] overflow-hidden rounded-2xl md:col-span-2 md:row-span-2 md:aspect-square group"><img src="https://source.unsplash.com/600x400/?sportfishing%20cabo&sig=0" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?marlin%20fishing%20baja&sig=1" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?deep%20sea%20fishing%20mexico&sig=2" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?fishing%20charter%20boat&sig=3" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?cabo%20san%20lucas%20ocean&sig=4" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div><div class="aspect-[4/3] overflow-hidden rounded-2xl  group"><img src="https://source.unsplash.com/600x400/?sportfishing%20cabo&sig=5" alt="Gallery" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" /></div></div>
+  </div>
+</section>
+<section class="py-20 px-6 bg-slate-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14"><div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_testimonials">Lo que dicen nuestros clientes</div></div>
+    <div class="grid md:grid-cols-3 gap-6" id="testimonials-container"></div>
+  </div>
+</section>
+<section class="relative py-20 px-6 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-emerald-500 to-emerald-700"></div>
+  <div class="relative max-w-4xl mx-auto text-center text-white">
+    <h2 class="text-4xl md:text-5xl font-black mb-4" data-i18n="cta_banner_title">Tu marlín no va a esperarte</h2>
+    <p class="text-lg md:text-xl opacity-95 mb-8 max-w-2xl mx-auto" data-i18n="cta_banner_text">La temporada en Cabo se llena rápido. Asegura tu fecha antes de que se agoten los lugares.</p>
+    <a href="https://wa.me/14806352965" class="inline-flex items-center gap-2 px-10 py-4 bg-white text-emerald-700 font-bold rounded-full shadow-xl hover:shadow-2xl transition"><span data-i18n="label_whatsapp">Escríbenos por WhatsApp</span></a>
+  </div>
+</section>
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+    <div>
+      <div class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3" data-i18n="section_contact">Contacto</div>
+      <div class="space-y-4 text-slate-700 mt-6">
+        <div class="flex items-start gap-3"><span class="text-xl">📍</span><div><div class="font-semibold">Cabo San Lucas</div></div></div>
+        <div class="flex items-start gap-3"><span class="text-xl">📞</span><div><div class="font-semibold" data-i18n="label_phone">Llámanos</div><a href="tel:+14806352965" class="text-sm text-indigo-600 hover:underline">+14806352965</a></div></div>
+        <div class="flex items-start gap-3"><span class="text-xl">💬</span><div><div class="font-semibold" data-i18n="label_whatsapp">Escríbenos por WhatsApp</div><a href="https://wa.me/14806352965" class="text-sm text-emerald-600 hover:underline">+14806352965</a></div></div>
+        <div class="flex items-start gap-3"><span class="text-xl">⭐</span><div><div class="font-semibold">5/5</div><div class="text-sm">2768 <span data-i18n="rating_suffix">reseñas en Google</span></div></div></div>
+      </div>
+    </div>
+    <div class="aspect-video rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+      <iframe src="https://maps.google.com/maps?q=Blue%20Sky%20Cabo%20Fishing%20and%20Tours%20-%20Cabo%20Fishing%20Cabo%20San%20Lucas&output=embed" class="w-full h-full" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+<footer class="bg-slate-900 text-slate-400 py-10 px-6 text-center text-sm">
+  <div class="font-bold text-white mb-2">Blue Sky Cabo Fishing and Tours - Cabo Fishing</div>
+  <div class="mb-4">Cabo San Lucas · +14806352965</div>
+  <div class="text-xs opacity-75">© 2026 · <a href="https://wa.me/14806352965" class="text-emerald-400 hover:underline" data-i18n="footer_cta">Reserva tu charter de pesca</a></div>
+</footer>
+</main>
+<script>
+const I18N = {"en":{"hero_eyebrow":"World-Class Sportfishing in Cabo San Lucas","hero_title":"Where Baja's Big Fish Live","hero_subtitle":"Expert captains, top-rigged boats, and the most productive waters in all of Baja.","hero_cta_primary":"Book Your Charter","hero_cta_secondary":"See Our Fleet","about_title":"Fishing Cabo the Right Way","about_text":"Blue Sky Cabo has been running fishing charters out of Cabo San Lucas for over a decade, and we've built our reputation on one thing: putting you on fish. Whether you're targeting marlin in the deep blue, yellowfin tuna near the seamounts, or dorado just offshore, our captains know these waters better than anyone.\n\nWe run a tight fleet of fully equipped sportfishing boats—clean, fast, and ready before sunrise. Every charter includes bait, tackle, ice, and a crew that actually cares whether you catch something. No bait-and-switch pricing, no hidden fees.\n\nCabo's waters are world-class, and we treat every trip like it matters—because to us, it does. Whether it's your first time offshore or you've been fishing Baja for years, we'll put together the right trip for you.","cta_banner_title":"Your Marlin Won't Wait","cta_banner_text":"Cabo's peak season moves fast. Lock in your charter date before the best spots fill up.","footer_cta":"Book Your Fishing Charter","label_phone":"Call us","label_hours":"Hours","label_whatsapp":"WhatsApp us","section_about":"About us","section_services":"What we offer","section_gallery":"Gallery","section_testimonials":"What our guests say","section_contact":"Contact","rating_suffix":"reviews on Google","services":[{"icon":"🎣","title":"Offshore Sportfishing","desc":"Full and half-day offshore trips targeting marlin, sailfish, and tuna. We fish where the fish are—no wasted miles."},{"icon":"🚤","title":"Inshore Fishing","desc":"Closer to shore, bigger action than you'd expect. Roosterfish, snapper, and jack crevalle within sight of the arch."},{"icon":"🏆","title":"Tournament Charters","desc":"Get serious about your catch. Our tournament-rigged boats and experienced deckhands give you every competitive edge."},{"icon":"⚓","title":"Private Charters","desc":"Smaller group, fully private boat, your agenda. Perfect for families or anglers who want their own pace on the water."},{"icon":"🐋","title":"Cabo Ocean Tours","desc":"Not just fishing. We offer whale watching, sunset cruises, and snorkel tours for days when everyone wants something different."},{"icon":"🐟","title":"Fish Cleaning & Filleting","desc":"We'll clean, fillet, and pack your catch for travel—or connect you with local restaurants that'll cook it the same night."}],"testimonials":[{"name":"Derek M.","rating":5,"text":"Went out with Blue Sky on a full-day offshore trip and the crew found us a marlin within two hours. Captain was sharp, the boat was solid, and the whole experience felt professional without being stiff. Best fishing day I've had in Baja by a long shot."},{"name":"Sofía Rentería","rating":5,"text":"Booked a private charter for my husband's birthday and it exceeded every expectation. The crew was attentive, the fish were biting, and they even helped us find a restaurant to cook our catch that night. We'll be back every season."},{"name":"Jake Thornton","rating":5,"text":"Third time fishing with Blue Sky and they keep raising the bar. These guys know Cabo's waters cold—where the tuna are stacking, when to move, when to stay put. Caught a 180-lb marlin on my last trip. Hard to find a better operation down here."}],"stats":[{"number":"2,768","label":"5-Star Reviews"},{"number":"10+","label":"Years Running Cabo Charters"},{"number":"30+","label":"Fish Species Caught Offshore"}]},"es":{"hero_eyebrow":"Pesca deportiva de primer nivel en Cabo San Lucas","hero_title":"Aquí viven los peces grandes de Baja","hero_subtitle":"Capitanes expertos, embarcaciones de alto rendimiento y los mejores caladeros de toda Baja.","hero_cta_primary":"Reserva tu charter","hero_cta_secondary":"Conoce nuestra flota","about_title":"Pesca en Cabo como se debe","about_text":"Blue Sky Cabo lleva más de una década saliendo al mar desde Cabo San Lucas, y nuestra reputación se construyó con resultados: peces en el anzuelo. Marlín en aguas profundas, atún aleta amarilla cerca de los montes submarinos, dorado frente a la costa—nuestros capitanes conocen estas aguas como la palma de su mano.\n\nOperamos una flota moderna de embarcaciones equipadas de punta a punta: limpias, rápidas y listas antes del amanecer. Cada charter incluye carnada, equipo, hielo y una tripulación que se toma en serio tu pesca. Sin precios engañosos, sin cobros sorpresa.\n\nLas aguas de Cabo son de clase mundial, y cada salida la tratamos como si fuera la más importante—porque para nosotros lo es. Ya sea tu primera vez en alta mar o llevas años pescando en Baja, armamos el viaje perfecto para ti.","cta_banner_title":"Tu marlín no va a esperarte","cta_banner_text":"La temporada en Cabo se llena rápido. Asegura tu fecha antes de que se agoten los lugares.","footer_cta":"Reserva tu charter de pesca","label_phone":"Llámanos","label_hours":"Horario","label_whatsapp":"Escríbenos por WhatsApp","section_about":"Sobre nosotros","section_services":"Qué ofrecemos","section_gallery":"Galería","section_testimonials":"Lo que dicen nuestros clientes","section_contact":"Contacto","rating_suffix":"reseñas en Google","services":[{"icon":"🎣","title":"Pesca deportiva en alta mar","desc":"Salidas de día completo o medio día en alta mar para marlín, pez vela y atún. Pescamos donde están los peces, sin vueltas."},{"icon":"🚤","title":"Pesca costera","desc":"Cerca de la costa, con más acción de la que imaginas. Gallo, pargo y jurel a pocos minutos del arco."},{"icon":"🏆","title":"Charters para torneo","desc":"Sube el nivel. Nuestras embarcaciones equipadas para torneo y tripulación experimentada te dan ventaja real en la competencia."},{"icon":"⚓","title":"Charters privados","desc":"Grupo reducido, embarcación completamente privada, tu ritmo. Ideal para familias o pescadores que prefieren su propio plan."},{"icon":"🐋","title":"Tours en el mar de Cabo","desc":"No solo pesca. Ofrecemos avistamiento de ballenas, paseos al atardecer y snorkel para cuando el grupo quiere variedad."},{"icon":"🐟","title":"Limpieza y fileteado de tu pesca","desc":"Limpiamos, fileteamos y empacamos tu pesca para llevar, o te conectamos con restaurantes locales que la preparan esa misma noche."}],"testimonials":[{"name":"Derek M.","rating":5,"text":"Salimos con Blue Sky en un día completo en alta mar y la tripulación nos llevó a un marlín en menos de dos horas. El capitán sabía exactamente a dónde ir, la embarcación estaba en perfecto estado y todo se sintió muy profesional. El mejor día de pesca que he tenido en Baja, sin duda."},{"name":"Sofía Rentería","rating":5,"text":"Reservé un charter privado para el cumpleaños de mi esposo y superó todo lo que esperábamos. La tripulación estuvo atenta en todo momento, picaron bien los peces y hasta nos ayudaron a encontrar un restaurante para que nos cocinaran la pesca esa noche. Volveremos cada temporada."},{"name":"Jake Thornton","rating":5,"text":"Es mi tercera vez pescando con Blue Sky y cada vez mejoran más. Conocen las aguas de Cabo a la perfección: dónde está el atún, cuándo moverse y cuándo quedarse quieto. En mi última salida saqué un marlín de 80 kilos. Difícil encontrar una operación mejor por aquí."}],"stats":[{"number":"2,768","label":"Reseñas de 5 estrellas"},{"number":"10+","label":"Años operando en Cabo"},{"number":"30+","label":"Especies capturadas en alta mar"}]}};
+const DEFAULT_LANG = "es";
+function renderStats(lang){
+  const c = document.getElementById('stats-container');
+  c.innerHTML = I18N[lang].stats.map(s => `<div class="text-center"><div class="text-4xl md:text-5xl font-black text-white">${s.number}</div><div class="text-sm text-white/80 mt-1">${s.label}</div></div>`).join('');
+}
+function renderAbout(lang){
+  const c = document.getElementById('about-text');
+  c.innerHTML = I18N[lang].about_text.split(/\n\n+/).map(p => `<p class="mb-4">${p}</p>`).join('');
+}
+function renderServices(lang){
+  const c = document.getElementById('services-container');
+  c.innerHTML = I18N[lang].services.map(s => `<div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition border border-slate-100"><div class="text-4xl mb-3">${s.icon}</div><h3 class="text-lg font-bold text-slate-900 mb-2">${s.title}</h3><p class="text-sm text-slate-600 leading-relaxed">${s.desc}</p></div>`).join('');
+}
+function renderTestimonials(lang){
+  const c = document.getElementById('testimonials-container');
+  c.innerHTML = I18N[lang].testimonials.map(t => {
+    const stars = '★'.repeat(t.rating) + '☆'.repeat(5 - t.rating);
+    return `<figure class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100"><div class="text-amber-400 mb-3">${stars}</div><blockquote class="text-slate-700 text-sm leading-relaxed mb-4">"${t.text}"</blockquote><figcaption class="text-xs font-semibold text-slate-900">— ${t.name}</figcaption></figure>`;
+  }).join('');
+}
+function applyLang(lang){
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.dataset.i18n;
+    if (I18N[lang][k] !== undefined) el.textContent = I18N[lang][k];
+  });
+  document.querySelector('[data-demo-banner-en]').hidden = lang !== 'en';
+  document.querySelector('[data-demo-banner-es]').hidden = lang !== 'es';
+  document.querySelectorAll('[data-lang-btn]').forEach(b => {
+    b.classList.toggle('active', b.dataset.langBtn === lang);
+  });
+  renderStats(lang); renderAbout(lang); renderServices(lang); renderTestimonials(lang);
+  try { localStorage.setItem('demo_lang', lang); } catch(e){}
+}
+let saved = DEFAULT_LANG;
+try { saved = localStorage.getItem('demo_lang') || DEFAULT_LANG; } catch(e){}
+applyLang(saved);
+document.querySelectorAll('[data-lang-btn]').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.langBtn)));
+</script>
+</body>
+</html>
