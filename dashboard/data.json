@@ -1,17 +1,18 @@
 {
-  "generated_at": "2026-04-17T21:49:56.582Z",
+  "generated_at": "2026-04-18T02:31:04.548Z",
   "stats": {
     "total_leads": 46,
     "total_local": 31,
     "total_freelance": 15,
-    "total_casos": 4,
+    "total_casos": 3,
+    "total_programas_afiliados": 12,
+    "total_contenido_afiliados": 3,
     "revenue_month_usd": 497,
     "pipeline_potential": 30464
   },
   "leads": [
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Cancun",
       "demo_url": null,
       "email_publico": null,
@@ -32,6 +33,7 @@
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGCMz6hl9U0V7Iq7Zss1CVk3VCkTS_3IUteajK3YKlVVS8CIbJHt54CXjx6-zRi6t5OzTnJsXZv3xhl1u5St-DTM3ufs1rKM0bVuKjaJwEIyKwB4IpgFxt3S9X1fY3Aw5QbZ69Z=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQ79fHFHVWl5tonexRccCJr_76Ld5q0MJ8WlLHk6BU5G3PydYfjPtgNyLB5951UJ7chglrrNqDdy7T2orz8T_j_mz41VRpyi3V5bvR5TPYrHluPn59IyntYHgkwtekp7jhXhk=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": null,
       "propuesta": null,
@@ -47,7 +49,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Playa del Carmen",
       "demo_url": null,
       "email_publico": null,
@@ -68,6 +69,7 @@
         "https://lh3.googleusercontent.com/p/AF1QipMlnO0D8gt6BVx8lVJojIuDZAzOFfwGKH97C8it=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/p/AF1QipNyrnbCN-w8S4yb5cFwz1ybHzf2rTDUnYuWgoKW=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": null,
       "propuesta": null,
@@ -83,7 +85,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Cancun",
       "demo_url": null,
       "email_publico": "info@cancuntarponfishing.com",
@@ -104,6 +105,7 @@
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEFY5_BIbivyCD5PrI5FXUek0lpNzlI8YuNZrw2tcAmJ1eb0U5tHfoFNTDTilv_zxUQr4QWxmDnzasju0RK8BlGg43giCSC6TpDR07reE5sn6dBHPvkAO8yZ2cIVCwabr6Qv9GlXNBkxl9a=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/p/AF1QipMFY3I0ppmjIYcIGiTv7ru_eapmtenjLoqqz0ei=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": null,
       "propuesta": null,
@@ -119,7 +121,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Playa del Carmen",
       "demo_url": null,
       "email_publico": "playaadventures@hotmail.com",
@@ -140,6 +141,7 @@
         "https://lh3.googleusercontent.com/p/AF1QipMD9Gmjpja-O564zQm3pxsu-OBx-Jx9CFTyVLvv=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH8mUF4w9vXEOPo-pG0qzeGgjEX0qXrVLKqUVrr445cQh_GODnN1jFthHYdtGJ5J1Il_J8D_rE4xWxZIhCR9Nnc2s9o3AzQJ8RoWle-M8unB3xYNqoay9kLRXA7rKnmeGSujtk_lQ=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": null,
       "propuesta": null,
@@ -155,7 +157,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Cancun",
       "demo_url": null,
       "email_publico": "info@cancun-discounts.com",
@@ -176,6 +177,7 @@
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF7sKqiZv20LbzKbHbGnVcJUH7SIcjQKEZWUCxpeExWwtFLK84pf9J6ACqln-BSWn1ZoDOdRiP5ldP4SjZB6mkMKk6K8d4Pet4hJYDcz8d1WqKSZ4KrdzkNOpRJEKUBBFBWMB9A=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAER3_-cl8iHFV6SM1NNdgqusntJsnhUotic13mlBf7__inJu7pvQjJ58FZWJNFaLXNgdTodnKiOnp9lRJlqwJoV_TYK2LA19M9YL8tRHPezaaKQZCr8FPvCyRAeVLrBJ_AxodghGg=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": null,
       "propuesta": null,
@@ -191,7 +193,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Cancun",
       "demo_url": null,
       "email_publico": "info@sambacatamarans.com",
@@ -212,6 +213,7 @@
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGHpLdvqu0MWrVeLaIgS3EWCPgq6hPK9iijo8Sk0M85CXrE7CaC7T6GYW8ALlw628I2R4aVdQfp6PJeBBFxXivz5R2zSy78BuNpQGQkKMp99aPFwdbBug67J9kuZNVng1OxZHw=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFRMxFvvG4Hnf_uvpwPQtNroKqO2RreErgRUoiKYozaERM4CzJUiJkePIQTibZ8hBqlcMGcEmRS0z91hxdJh5dARKpT7NNOhbPHfB0TN7Ggjv6b7shNK5G31iBL0ghULCbhJaby=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": null,
       "propuesta": null,
@@ -227,7 +229,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Playa del Carmen",
       "demo_url": null,
       "email_publico": null,
@@ -248,6 +249,7 @@
         "https://lh3.googleusercontent.com/p/AF1QipN2uSwU8nX_q44UvgoS2womNM5LKsNh1f7rH1me=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/p/AF1QipP8IZh5fht1WTmSmP_OTrouNsUC4WMoNfCs_PIT=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": null,
       "propuesta": null,
@@ -263,7 +265,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Cancun",
       "demo_url": null,
       "email_publico": "info@marinapuestadelsol.com.mx",
@@ -284,6 +285,7 @@
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF0qGDUsYhe5f41EYL5r4cAoCcYzB9QbVTVyoy6jXJIuW2rURP0Y_dkNZCRLwrBAZPy113NVELX56UzMB3a3lm-KDC7Mzv6meNY2neVnLSxPJ3c0IRcwONP7Jm3-cFU9RibjMKs4cvQij0V=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGUx_LDw2gFlgyrvhY5h5hOOrDX_DGX4mWO5E6LYJzuc83DZXJzv4OJaAcmpC2J_g0PTT2eVAnLjXaXsajgNA6qCFD2aVccHaOTElw982MspXYoypTkXqSF9-I5K_MqDOFlJsSR=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": null,
       "propuesta": null,
@@ -299,7 +301,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Cancun",
       "demo_url": null,
       "email_publico": "info@mexicowhaleshark.com",
@@ -320,6 +321,7 @@
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGxQG7R6I6TUeX_38cD2-b6-tkAvI-_lnbTIjG93Ph1CtMRJnUC-lbyq--KKKnzsQQQPcBEEnTDl5sMlvRbFvDDL5KnmQDkkm6ereeMVzxVnnRgyLpgSkdSimrIUkl0z7oqyakc=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAECFXRzS_7h4cJ3EDjFkDXAjMPT0jXK2jhSVHPRjA0erSEeDJrsAilrley8KQMfThDpjm3xrhLc2HmSEF2HimG1MALBRyElZg1i0dQngJtOHQ0UBHlfKn_4-vJZJIdlk7h57ffKzlSnfycI=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": null,
       "propuesta": null,
@@ -335,7 +337,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Playa del Carmen",
       "demo_url": null,
       "email_publico": null,
@@ -356,6 +357,7 @@
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFUvuQElPQk7lmCRpR0Rc0eBpE9k5kDZ51DKnkpUFfd6iaHBwk8enY7FkPSDzLr5Q06J9JluZTPjSPm9xd0QLNqYD1O9wagS5WROuQjeY6lITA2JJr4cp6cVg0kE8Rfu_zt__2wA_B-E4IT=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEZEu4Ze_IooiBMMBxYTZwDbnC5pTn07KtY2kqtRbTeWYtNHaJr0qpuLm3x4MspHgpErtBBygf6jGa9_vyI9dD0hy5jzIeUgQtmUT-cix0wgirx8BjCOylTbMNxw2KpG0715IoQhKYvQKg=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": null,
       "propuesta": null,
@@ -371,7 +373,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Cancun",
       "demo_url": null,
       "email_publico": null,
@@ -392,6 +393,7 @@
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFIaCyBk3_zZzAOb3IdGOAjLzN_Q3WOqegcpyj76YC6qjqtJnSmH05f1U5lEl9HF0Tl6OMkal1_mYW9YfPPmn5lDfkIMqWlqXS-1rKLccEP1mai4HlXzdAP2yKIiWXFpaYK-JBB=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGBltZADf0pOZbtzhgIApwjZq9mrNioQT9PCtcMS7vwkPf5C7FROfjeOc_IDFuFgbRT2-FFhS4QBL1BGG7TkNqpRMNr-iFS8gIH8irE-1Jt8P8Mv2uDL32ShAeCkevbMZqeQ8ov_A=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": null,
       "propuesta": null,
@@ -407,7 +409,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "X/Twitter",
       "demo_url": null,
       "email_publico": null,
@@ -424,6 +425,7 @@
       "nombre": "🤝 Hiring: Social Media Manager - Bitunix",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "$25/hr portfolio / $40/hr market",
       "propuesta": "(pending LLM)",
@@ -439,7 +441,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "X/Twitter",
       "demo_url": null,
       "email_publico": null,
@@ -456,6 +457,7 @@
       "nombre": "🔥Urgent Hiring: Social Media Manager!🌟Location: Warri, Delta State.💌APPLY: careers.tepconsultingltd@gmail.com⏳Act fas",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "$25/hr portfolio / $40/hr market",
       "propuesta": "(pending LLM)",
@@ -471,7 +473,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "X/Twitter",
       "demo_url": null,
       "email_publico": null,
@@ -488,6 +489,7 @@
       "nombre": "🇳🇬 Hiring: Social Media Manager",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "$25/hr portfolio / $40/hr market",
       "propuesta": "(pending LLM)",
@@ -503,7 +505,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "X/Twitter",
       "demo_url": null,
       "email_publico": null,
@@ -520,6 +521,7 @@
       "nombre": "Code whispers echo through abandoned cafes at midnight Anyone need a ghostwriter?",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "$25/hr portfolio / $40/hr market",
       "propuesta": "(pending LLM)",
@@ -535,7 +537,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "X/Twitter",
       "demo_url": null,
       "email_publico": null,
@@ -552,6 +553,7 @@
       "nombre": "HIRING SOCIAL MEDIA MANAGER",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "$25/hr portfolio / $40/hr market",
       "propuesta": "(pending LLM)",
@@ -567,7 +569,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "San Diego",
       "demo_url": null,
       "email_publico": null,
@@ -584,6 +585,7 @@
       "nombre": "Odyssea Adventures",
       "pais": "US",
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Base $1497 USD + $497/mes",
       "propuesta": "• 4.9 estrellas con 292 reseñas — centro de buceo en Mission Bay con reputación casi perfecta y mercado premium en San Diego.\n• Web odysseadiving.com corre en HTTP sin HTTPS — los buzos que buscan cursos PADI y charters en Google ven un sitio inseguro y eligen competidores con web moderna antes de llegar a tu teléfono.\n• Los buzos certificados buscan operadores en Google con alta intención de compra — sin SEO técnico correcto (HTTPS, velocidad, mobile-first), tu 4.9 de rating no te rescata del ranking bajo.\n• Web bilingüe EN/ES: San Diego y Mission Bay reciben turistas hispanos de Tijuana, México y Latinoamérica que buscan diving en español — mercado desatendido por la mayoría de dive shops locales.\n• Oportunidad específica: página de cursos con niveles (Open Water, Advanced, Rescue), calendario de salidas y reserva online con pago de depósito — convierte el tráfico orgánico que ya llega a tu área.",
@@ -599,7 +601,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "San Diego",
       "demo_url": null,
       "email_publico": null,
@@ -616,6 +617,7 @@
       "nombre": "Marissa Charters - San Diego Scuba Diving Charter Boat and Bay Cruises",
       "pais": "US",
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Base $1497 USD + $497/mes",
       "propuesta": "• Rating perfecto 5.0 con 308 reseñas — operador de buceo y cruceros en bahía con reputación impecable en Mission Beach, San Diego.\n• Web marissacharters.com corre en HTTP sin HTTPS y está construida en Wix básico — los buzos certificados que buscan 'scuba diving San Diego' en Google no la encuentran ni confían en ella para reservar.\n• Los buzos certificados buscan activamente operadores PADI/SSI en Google con intención de reserva alta — sin web optimizada con keywords de buceo, invisibles para ese tráfico premium.\n• Web bilingüe EN/ES: San Diego tiene una enorme comunidad hispana que bucea — y turistas de México y Latinoamérica que visitan la ciudad y buscan diving en español.\n• Oportunidad concreta: página de charters con fechas disponibles, niveles de certificación requeridos y reserva online con depósito — el flujo estándar que usan los dive shops que dominan Google San Diego.",
@@ -631,7 +633,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Cabo San Lucas",
       "demo_url": null,
       "email_publico": null,
@@ -648,6 +649,7 @@
       "nombre": "Pisces Sportfishing and Yachts",
       "pais": "MX",
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Base $797 USD + $297/mes",
       "propuesta": "• 4.8 estrellas con 405 reseñas — charter de pesca deportiva y yates con reputación sólida en la marina de Cabo San Lucas.\n• Web piscessportfishing.com corre en HTTP sin HTTPS — los turistas americanos que llegan listos para reservar un charter de $800+ USD ven 'No seguro' y salen sin reservar.\n• El turista americano reserva pesca deportiva con 1-2 semanas de anticipación desde casa — sin web moderna que inspire confianza y permita reservar con tarjeta, pierdes ese tráfico caliente.\n• Con web bilingüe EN/ES capturas al mercado americano (tu cliente principal) PLUS al turista hispano premium de Cabo — diferenciador frente a competidores que solo tienen web en inglés.\n• Oportunidad directa: galería de capturas recientes por especie, paquetes de yate con fotos 360° y sistema de reserva con depósito online — el estándar que espera el cliente que paga $800+ USD por salida.",
@@ -663,7 +665,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Key West",
       "demo_url": null,
       "email_publico": null,
@@ -680,6 +681,7 @@
       "nombre": "The Duval House",
       "pais": "US",
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Hotel/Resort desde $2500 USD + $497/mes",
       "propuesta": "• 4.6 estrellas con 754 reseñas — B&B icónico en Duval Street con demanda real y ubicación inmejorable en Key West.\n• Web theduvalhouse.com corre en HTTP sin HTTPS y con diseño de generación anterior — las parejas y viajeros boutique que investigan online la descartan antes de ver las fotos del jardín.\n• Cada reserva por Booking o Airbnb te cuesta entre 15-18% de comisión — tu ubicación en Duval St justifica perfectamente una estrategia de reservas directas con tu propia web.\n• Web bilingüe EN/ES: Key West atrae a turistas hispanos de todo el Caribe y Miami — un B&B boutique con web en español es diferenciador inmediato en ese mercado.\n• Oportunidad específica: storytelling del edificio histórico + galería inmersiva + motor de reserva directa con 'Best Rate Guarantee' — la combinación que convierte curiosidad en booking.",
@@ -695,7 +697,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Key West",
       "demo_url": null,
       "email_publico": null,
@@ -712,6 +713,7 @@
       "nombre": "The Gardens Hotel",
       "pais": "US",
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Hotel/Resort desde $2500 USD + $497/mes",
       "propuesta": "• 4.9 estrellas con 709 reseñas — reputación casi perfecta en un hotel boutique premium de Key West, exactamente el perfil que convierte mejor con web directa.\n• Web gardenshotel.com corre en HTTP sin HTTPS — señal de alerta para Google y para huéspedes de lujo que esperan una experiencia digital a la altura del hotel.\n• Cada reserva por Booking.com o Expedia se lleva 18% de comisión — con tu rating de 4.9 tienes todo para cerrar reservas directas si la web convierte correctamente.\n• Web bilingüe EN/ES: el mercado hispano de alto poder adquisitivo (Miami, NYC, LATAM) busca hoteles boutique en Key West — hoy no los estás alcanzando en su idioma.\n• Oportunidad concreta: página de experiencias del jardín + sistema de reserva directa con tarifa preferencial — diferenciador claro frente a los otros boutique hotels de Duval St.",
@@ -727,7 +729,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": 2,
       "ciudad": "Key West",
       "demo_url": "https://evaansantiago85-coder.github.io/web-demos/demos/ibis-bay-beach-resort--tTief3A-v2.html",
       "email_publico": null,
@@ -753,6 +754,7 @@
         "https://lh3.googleusercontent.com/p/AF1QipPBtXMRy7aOS7t3WQo6Hz_OjAb2aQ5do2C5zDhq=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE-nuzmVDjtH_O0Y0e_Q0hSHAy1A4VWxBeI5JFqdpZS8HKAGSqpxlDTXNpZUYSwNV4vDiHaaZJZEzflmdwH-VIUcINyJVBDHZs2tJGENnOC-Puz1E1yiZ5CRfYeRJzOd-LmOnEJvg=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": "Hey Ibis Bay Beach Resort. Quick one. You've got 4,312 reviews in Key West — that's real volume, people clearly love the place. But your site still runs on HTTP, no HTTPS. Google ranks it lower... and guests see a Not Secure warning right before they hit book. That's a conversion killer. On top of that, every Booking dot com reservation costs you 18% commission. We built you a bilingual demo — English and Spanish — with a direct booking engine built in. Key West gets tons of Spanish-speaking visitors from Miami and Latin America. Check it out at the link I'm sending you.",
       "pricing_sugerido": "Hotel/Resort desde $2500 USD + $497/mes",
       "propuesta": "• 4.0 estrellas con 4,312 reseñas — volumen de tráfico enorme en un destino premium como Key West, pero el rating sugiere fricción en la experiencia que una web clara puede compensar.\n• Web ibisbayresort.com corre en HTTP sin HTTPS — Google la penaliza en SEO y los huéspedes que quieren reservar directo ven 'Not Secure' justo en el checkout, lo que dispara abandono.\n• Cada reserva que llega por Booking.com o Expedia te cuesta 18% de comisión — con un motor de reservas directo en tu propia web recuperas ese margen por habitación.\n• Web bilingüe EN/ES: Key West recibe miles de turistas hispanos de Miami, Cuba y América Latina — capturas ese mercado que hoy no encuentra tu resort en su idioma.\n• Oportunidad inmediata: landing page de ofertas directas con 'Book direct & save' + galería de playa actualizada — el combo que convierte tráfico orgánico en reservas propias.",
@@ -768,7 +770,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": 3,
       "ciudad": "Tulum",
       "demo_url": "https://evaansantiago85-coder.github.io/web-demos/demos/mexico-kan-tours-tulum-riviera-maya-eco-tours-OSQTnlPg-v2.html",
       "email_publico": null,
@@ -794,6 +795,7 @@
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHQd9dCj2z-nTZWI8oyxjjQTTbyHaKL__xC1wa70h9SN3SBVIdY9XeAKimfCyzHJODvaELZ8CIC4YHOHDOcR5nJPiiTSWHSRv78ZcV9lnpisZZk2QMMJPlZZE9Ggjh64VknYt0v=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFCxktg5dGt5bAuUNWcDPQO4seOI5akw05BRbA5bEz2ovICk-_XiMSFwLpqV5pPkNJh3ysWQI0ZoIocH_r_MhS_ainLemsTDxBcj-_zQxxSb2m4PdU6xzMuTZY1o4oCYDKJQe9s7w=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": "Hola Mexico Kan Tours. 4.8 estrellas con 1,405 reseñas — claramente hacen un trabajo increíble en la Riviera Maya. Lo que detecté: su web va sin HTTPS y sin sistema de reservas propio. Eso significa que el turista que los encuentra en Google... termina reservando en GetYourGuide, y GetYourGuide les cobra 25% de comisión por cada tour. Les armé una demo bilingüe — inglés y español — con booking directo integrado para cortar esos intermediarios. Ya está lista. Échenle un vistazo al link que les mando.",
       "pricing_sugerido": "Hotel/Resort desde $2000 USD + $297/mes",
       "propuesta": "• 4.8 estrellas con 1,405 reseñas — agencia eco-turística con reputación probada en la Riviera Maya, mercado de alto valor.\n• Web mexicokantours.com corre en HTTP sin HTTPS y con diseño desactualizado — Google penaliza el ranking y los turistas que quieren reservar desde casa ven un sitio que no transmite confianza.\n• El 40% de los eco-tours se reservan online 24-48h antes de la experiencia — sin sistema de booking integrado, estás regalando esas reservas a plataformas que cobran hasta 25% de comisión.\n• Con web bilingüe EN/ES conectas al turista americano que busca 'eco tours Tulum' en Google + al viajero hispano que llega a Riviera Maya — dos mercados en un solo sitio.\n• Oportunidad específica: página de paquetes con itinerarios detallados, fotos profesionales y reserva con pago parcial online — el estándar que usan las agencias que dominan Google Tulum.",
@@ -809,7 +811,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": 3,
       "ciudad": "Tulum",
       "demo_url": "https://evaansantiago85-coder.github.io/web-demos/demos/cenotes-sac-actun-vn7vkguM-v2.html",
       "email_publico": null,
@@ -835,6 +836,7 @@
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHCci2MIzp6sZC2ezh6GTgru1TrDdSCdoX40LLPTiamtdXLeC-XtSJVJPW3Fc9BxLhCl9raynB5m5hRezcb_9x_5FnFPWRp6S6d1fAIqcX8q6SRYHbHY8DLa9h1hAVYb4743HHF=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbud-_KPxHZ6VXu50EPSTziF3Ezeg6UZr3mQD9ivXyb24txOKAtAomEadye0Sf45QUvaxLiyCWNnLG08x_gn2H4_OEgKQAyjGOfEQuQ9m0-_6nKaCx4gYWCHFBklFXp759dKA=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": "Hola equipo de Cenotes Sac Actún. 4.8 estrellas con más de 1,400 reseñas — están muy bien posicionados en Tulum. El detalle que encontré: su web corre sin HTTPS. Google la baja en resultados... y el turista que llega a reservar ve 'No seguro' en el navegador. Ahí se van. Les preparé una demo bilingüe — inglés y español — con calendario de disponibilidad y reservas online reales. Sin eso, ese 40% de turistas que reservan desde el celular se va a la competencia. Mírala en el link que te mando.",
       "pricing_sugerido": "Hotel/Resort desde $2000 USD + $297/mes",
       "propuesta": "• 4.8 estrellas con 1,406 reseñas — posicionamiento sólido en un nicho muy competido como los cenotes de Tulum.\n• Web actual cenotessacactun.com corre en HTTP sin HTTPS — señal de alerta para Google y para turistas que quieren pagar online; el navegador muestra 'No seguro'.\n• Sin reservas online, el 40% de turistas que buscan cenote con disponibilidad inmediata eligen al competidor que sí les permite reservar desde el celular.\n• Web bilingüe EN/ES: el turista americano que llega a Tulum busca en inglés — si tu web solo habla en español o no carga bien en móvil, esa reserva se va a Dos Ojos o a GetYourGuide.\n• Oportunidad concreta: calendario de disponibilidad en tiempo real + opción de paquete snorkel + transporte — producto fácil de vender online con ticket promedio de $2,000 MXN.",
@@ -850,7 +852,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": 5,
       "ciudad": "Cabo San Lucas",
       "demo_url": "https://evaansantiago85-coder.github.io/web-demos/demos/blue-sky-cabo-fishing-and-tours-cabo-fishing-mVxn9uVY-v2.html",
       "email_publico": null,
@@ -876,6 +877,7 @@
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHIQFVfMwMLPAL6rJkrl7pOIbK6dqpVB35dBFe2ZgFxyjIbkbsFIM8T-QxnZa-NC2cIfrxZj6vGSXGu5rtsiWD3ySMw0ftkj4VTTHahUBmaI3CyySPZcpYE_0IohZ-cG7yCOCWkJWv7JAjI=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH1fnGvqhpPRjsMabVWluSTtbHRORaVS3QRyE-KXymSLHVvQUfEECSCoG3FrC700pom7fjWrgNm8m5oIpFi-eu2jKjUE9nQH-2OTHbgYKIBMTGB5w1nibGKwH8D7T_vvZrFQUChNCwXyP5A=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": "Hola Blue Sky Cabo. Perfecto 5.0 con 2,768 reseñas — eso en Cabo es rarísimo, felicidades. Pero hay un problema concreto: su sitio corre en HTTP, sin HTTPS. Google los posiciona más abajo... y el cliente que ya quiere reservar un charter ve 'No seguro' justo antes de pagar. Eso mata conversiones. Les hice una demo bilingüe — inglés y español — con sistema de reservas y depósito online incluido. Está lista, funciona en móvil, se ve increíble. Échenle un ojo al link que les mando.",
       "pricing_sugerido": "Hotel/Resort desde $2000 USD + $297/mes",
       "propuesta": "• Rating perfecto 5.0 con 2,768 reseñas — señal de operación premium en Cabo San Lucas, mercado de altísimo poder adquisitivo.\n• Tiene web http://www.cabofishings.com/ sin HTTPS, diseño obsoleto y sin optimización móvil — Google la penaliza en ranking y los turistas desconfían de un sitio inseguro antes de pagar un charter.\n• Los turistas americanos reservan pesca deportiva con 2+ semanas de anticipación — tu web actual no convierte ese tráfico caliente que ya llega a buscarte.\n• Con web bilingüe EN/ES capturas al turista americano que es tu cliente principal PLUS al mercado hispano premium de Cabo — doble oportunidad sin doble esfuerzo.\n• Oportunidad clave: galería de capturas recientes, sistema de reserva con depósito online y testimonios en inglés — el trío que convierte visitantes en clientes pagados.",
@@ -891,7 +893,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": 3,
       "ciudad": "Tulum",
       "demo_url": "https://evaansantiago85-coder.github.io/web-demos/demos/cenote-dos-ojos-VhvaTBzE-v2.html",
       "email_publico": null,
@@ -917,6 +918,7 @@
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAECK0VZvwGzxQbV8gedTMwEdflRAri-Y4nVYYTjiBQzVWpNjWgE97MOC3NDk7bczO08w_hNiCh5fMjWJglFtSHlcch8bPAePA29AeQmI0LhUZRNtuxSvBXKO_3QLov-omab7CWuES55Dxyw=w1920-h1080-k-no",
         "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH9AI8LwARrzDOAmTgP2PHZioblwPspZ1v7fDrKCKJNKRIYC8CWnFj2nSRsNUaQAXSQybGEOcPqvTYGTFBx7FkrzGqIkmz7k6m52B0PBcBIDC9IYPoSjOtL2J7UV1AfzocfErtz=w1920-h1080-k-no"
       ],
+      "pitch_audio_url": null,
       "pitch_script_text": "Hola, ¿hablan de Cenote Dos Ojos? Miren... 7,833 reseñas con 4.7 estrellas — eso es una locura, son de los cenotes más visitados de Tulum. El problema que veo: no tienen web propia. El turista que los busca en Google no encuentra cómo reservar... y se va con otro cenote. El 40% de las reservas pasan 24 horas antes, online. Les armé una demo bilingüe — inglés y español — con booking integrado, para capturar esas reservas directo, sin intermediarios. Mírenla en el link que les mando.",
       "pricing_sugerido": "Hotel/Resort desde $2000 USD + $297/mes",
       "propuesta": "• 4.7 estrellas con 7,833 reseñas — uno de los cenotes más visitados de Tulum, demanda real y sostenida.\n• No tiene sitio web propio: los turistas que te buscan en Google no encuentran info oficial, precios ni cómo reservar.\n• El 40% de los tours de cenote se reservan online 24h antes — sin web, esas reservas van directo a tus competidores o a intermediarios que se quedan con comisión.\n• Con web bilingüe EN/ES capturas tanto al turista americano que investiga desde casa como al viajero hispano que llega a Tulum — diferenciador real frente a otros cenotes.\n• Oportunidad inmediata: sistema de booking online con calendario de disponibilidad y pago anticipado — elimina walk-ins perdidos y reduce cancelaciones de último minuto.",
@@ -932,7 +934,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Miami",
       "demo_url": null,
       "email_publico": null,
@@ -949,6 +950,7 @@
       "nombre": "Sabor latino cafe",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Base $797 USD + $297/mes",
       "propuesta": "• Rating 4.9 ⭐ con 78 reseñas — café cubano con reputación casi perfecta en La Pequeña Habana, Miami\n• Sin sitio web: turistas y locales que buscan café cubano auténtico no los encuentran en buscadores\n• Estimado: 80-100 búsquedas/mes de café cubano en Little Havana que van a locales con presencia digital\n• Oportunidad: menú digital con QR y sección de historia del negocio para conectar con el turista\n• Oportunidad: integración con Google Orders o pickup online para aumentar ticket promedio",
@@ -964,7 +966,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Miami",
       "demo_url": "https://evaansantiago85-coder.github.io/web-demos/demos/mi-ranchito-bar-karaoke-food-uirVqXVw.html",
       "email_publico": null,
@@ -981,6 +982,7 @@
       "nombre": "Mi Ranchito Bar - Karaoke - Food",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Base $797 USD + $297/mes",
       "propuesta": "• Rating 4.0 ⭐ con 217 reseñas — bar con karaoke y comida latina, concepto que atrae grupos y eventos\n• Sin sitio web: clientes que buscan bar con karaoke en Miami no los encuentran directamente\n• Estimado: 100+ búsquedas/mes de karaoke bar en Miami West que van a locales con página web\n• Oportunidad: sistema de reservas para mesas y eventos privados de karaoke directamente desde la web\n• Oportunidad: menú digital con QR y calendario de eventos y noches temáticas para generar recurrencia",
@@ -996,7 +998,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Buenos Aires",
       "demo_url": null,
       "email_publico": null,
@@ -1013,6 +1014,7 @@
       "nombre": "Mecánica Integral del Automotor Franco",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Base $497 USD + $197/mes",
       "propuesta": "• Rating 4.6 ⭐ con 147 reseñas — taller con buena reputación consolidada en San Cristóbal, CABA\n• Sin sitio web: pierden visibilidad frente a talleres que sí aparecen con página en Google\n• Estimado: 90-120 búsquedas/mes de mecánico en San Cristóbal con intención de contratar\n• Oportunidad: sección de servicios detallados (frenos, dirección, electricidad) con formulario de consulta\n• Oportunidad: sistema de turnos online para agilizar la operación diaria del taller",
@@ -1028,7 +1030,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Buenos Aires",
       "demo_url": null,
       "email_publico": null,
@@ -1045,6 +1046,7 @@
       "nombre": "Taller mecánico Papes",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Base $497 USD + $197/mes",
       "propuesta": "• Rating 4.6 ⭐ con 157 reseñas — buen volumen de reseñas para un taller en Saavedra, Buenos Aires\n• Sin sitio web: vecinos que buscan mecánico en la zona no los encuentran fácilmente online\n• Estimado: 100+ búsquedas/mes de taller en Saavedra/Villa Urquiza que van a talleres con presencia digital\n• Oportunidad: página con lista de servicios y precios orientativos para que el cliente llegue informado\n• Oportunidad: sistema de turnos online para reducir llamadas y organizar mejor el taller",
@@ -1060,7 +1062,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Ciudad de Mexico",
       "demo_url": "https://evaansantiago85-coder.github.io/web-demos/demos/dr-cesar-ortiz-xmk5NG9s.html",
       "email_publico": null,
@@ -1077,6 +1078,7 @@
       "nombre": "Dr. Cesar Ortiz",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Base $497 USD + $197/mes",
       "propuesta": "• Rating 5.0 ⭐ con 109 reseñas — dentista con puntuación perfecta en Polanco, zona de alto poder adquisitivo\n• Sin sitio web profesional: en una colonia como Polanco, la ausencia digital resta credibilidad\n• Estimado: 150+ pacientes potenciales/mes buscan dentista en Polanco y priorizan quienes tienen web\n• Oportunidad: página con especialidades, precios orientativos y galería de sonrisas trabajadas\n• Oportunidad: formulario de primera cita online con confirmación automática por WhatsApp",
@@ -1092,7 +1094,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Medellin",
       "demo_url": null,
       "email_publico": null,
@@ -1109,6 +1110,7 @@
       "nombre": "Victoriosa nails spa",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Base $497 USD + $197/mes",
       "propuesta": "• Rating 5.0 ⭐ con 113 reseñas — puntuación perfecta en nail spa de Medellín, muy sólido\n• Sin sitio web: clientas nuevas no pueden ver el catálogo de diseños ni reservar turno online\n• Estimado: 70-90 búsquedas/mes de nail spa en Fuente Clara que van a competidores con presencia digital\n• Oportunidad: galería de diseños de uñas para inspirar y atraer clientas antes de que lleguen\n• Oportunidad: sistema de reservas online para reducir cancelaciones y organizar agenda",
@@ -1124,7 +1126,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Ciudad de Mexico",
       "demo_url": "https://evaansantiago85-coder.github.io/web-demos/demos/saiki-dentistas-QxxPaNjg.html",
       "email_publico": null,
@@ -1141,6 +1142,7 @@
       "nombre": "saiki dentistas",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Base $497 USD + $197/mes",
       "propuesta": "• Rating 5.0 ⭐ con 115 reseñas — perfección absoluta, una clínica dental top en Popotla, CDMX\n• Sin sitio web: pacientes nuevos que buscan dentista en la zona no llegan a ellos directamente\n• Estimado: 120+ personas/mes buscan dentista en Miguel Hidalgo y eligen clínicas con web profesional\n• Oportunidad: página con tratamientos y precios aproximados para filtrar pacientes calificados\n• Oportunidad: formulario de cita online y sección de antes/después de tratamientos estéticos",
@@ -1156,7 +1158,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Medellin",
       "demo_url": null,
       "email_publico": null,
@@ -1173,6 +1174,7 @@
       "nombre": "BIP PROFESIONAL - Artistas en Belleza",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Base $497 USD + $197/mes",
       "propuesta": "• Rating 4.9 ⭐ con 170 reseñas — excelente reputación para un centro de estética en Medellín\n• Sin sitio web: clientes potenciales no pueden ver servicios, precios ni agendar citas online\n• Estimado: 80-100 personas/mes buscan estética profesional en Francisco Zea y eligen quien tenga presencia digital\n• Oportunidad: galería de trabajos before/after para mostrar resultados reales\n• Oportunidad: agenda online para reservar citas sin necesidad de llamar o escribir por WhatsApp",
@@ -1188,7 +1190,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Buenos Aires",
       "demo_url": "https://evaansantiago85-coder.github.io/web-demos/demos/taller-san-cristobal-QaMKf0m8.html",
       "email_publico": null,
@@ -1205,6 +1206,7 @@
       "nombre": "Taller San Cristobal",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Base $497 USD + $197/mes",
       "propuesta": "• Rating 4.9 ⭐ con 1,064 reseñas — reputación extraordinaria para un taller mecánico en CABA\n• Sin sitio web: los clientes nuevos no pueden encontrar servicios, precios ni turnos online\n• Estimado: unos 150 vecinos/mes buscan taller en Parque Patricios y eligen al que tiene web\n• Oportunidad: sistema de turnos online para evitar llamadas y organizar la agenda\n• Oportunidad: sección de servicios con presupuesto online para frenos, aceite, suspensión, etc.",
@@ -1220,7 +1222,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Miami",
       "demo_url": "https://evaansantiago85-coder.github.io/web-demos/demos/mofongo-2-restaurant-calle-8-Zyn3upS8.html",
       "email_publico": null,
@@ -1237,6 +1238,7 @@
       "nombre": "MOFONGO 2 RESTAURANT CALLE 8",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "Base $797 USD + $297/mes",
       "propuesta": "• Rating 4.5 ⭐ con 3,711 reseñas — uno de los restaurantes más traccionados de Calle 8\n• Sin sitio web propio: cualquier búsqueda en Google los manda a competidores o Yelp\n• Estimado: más de 200 personas/mes buscan \"restaurante puertorriqueño Miami\" y no los encuentran directamente\n• Oportunidad: menú digital con QR en mesa + pedidos para llevar desde la web\n• Oportunidad: integración con OpenTable o reservas directas para grupos y eventos",
@@ -1252,7 +1254,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Reddit r/forhire",
       "demo_url": null,
       "email_publico": null,
@@ -1269,6 +1270,7 @@
       "nombre": "[Hiring] Can you transcribe math notes?",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "$20 portfolio / $35-50 market rate per assignment",
       "propuesta": "You're specifically pushing back against AI-generated content by offering handwritten math notes — that's a clear and marketable differentiator for the IGCSE and A-Level audience. This role is more of a handwriting/tutoring skill set than a copywriting one, which sits outside my core services. Budget at $20 per assignment is also below market for the precision required. Score reflects low fit for a copywriter/ghostwriter profile, but the concept is genuinely sharp for the right candidate with a math background and strong penmanship.",
@@ -1284,7 +1286,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "X/Twitter",
       "demo_url": null,
       "email_publico": null,
@@ -1301,6 +1302,7 @@
       "nombre": "Hiring!",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "no especificado / $400-700 market rate",
       "propuesta": "Your post is brief but the requirements — tech-savviness, reporting, and a professional certification alongside 2-3 years of experience — suggest you need a copywriter who can handle structured content in a corporate or regulated environment, not just creative copy. I combine writing skill with the ability to work inside frameworks, meet reporting requirements, and adapt to brand guidelines without hand-holding. The Nigeria-based contact (AWC) suggests a local or regional focus, which I'd want to confirm before applying. If remote work is on the table and you can share the scope, I'm ready to discuss specifics. Drop the brief or a sample deliverable and we can go from there.",
@@ -1316,7 +1318,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "X/Twitter",
       "demo_url": null,
       "email_publico": null,
@@ -1333,6 +1334,7 @@
       "nombre": "Hiring: Copywriter",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "$500 portfolio / $1,200-2,000 market (per project or retainer)",
       "propuesta": "Amazon and marketplace SEO copy is a specialized discipline — keyword placement, character limits, indexing logic, and conversion language all operate differently than standard copy. You need someone who's worked inside those constraints and knows how to balance search intent with brand voice. I've written product listings for eCommerce brands across multiple categories, adapting tone and structure for each marketplace's algorithm and buyer behavior. If you share the product category and any existing listings, I can return a rewritten sample title and bullets within 48 hours. That gives you a concrete quality check before any commitment.",
@@ -1348,7 +1350,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "X/Twitter",
       "demo_url": null,
       "email_publico": null,
@@ -1365,6 +1366,7 @@
       "nombre": "Hiring: Copywriter",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "$500 portfolio / $1,200-2,000 market (per project or retainer)",
       "propuesta": "Your listing calls for someone who understands Amazon SEO and marketplace dynamics — not just clean prose. Product listings live or die on keyword hierarchy, bullet structure, and conversion intent, and those require a different discipline than blog writing. I've written listings optimized for A9 search ranking while maintaining brand voice across marketplace formats. Five-plus years in eCommerce copy means I understand the difference between ranking and converting. If you have a specific product category in mind, send it over and I'll return a sample title and bullet set so you can evaluate fit before committing.",
@@ -1380,7 +1382,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Reddit r/forhire",
       "demo_url": null,
       "email_publico": null,
@@ -1397,6 +1398,7 @@
       "nombre": "[Hiring] Our startup is looking to hire a full time B2B Linkedin Ads Expert with excellent enterprise customer communication skills. ($75k-$150k + equity)",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "N/A — full-time role, not freelance project",
       "propuesta": "Your startup is looking for a full-time LinkedIn Ads expert who can hold their own in Fortune 500 rooms — that's a specific and demanding combination. My background covers B2B LinkedIn campaign strategy, ad copy, and messaging frameworks that speak to enterprise buyers without sounding like a vendor. I've worked alongside technical founders to translate product capabilities into pipeline-driving content. The equity component tells me you're building for the long term, not just filling a seat. Happy to share examples of LinkedIn campaigns I've built for B2B SaaS contexts. Want to jump on a 20-minute call to see if there's a fit?",
@@ -1412,7 +1414,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "X/Twitter",
       "demo_url": null,
       "email_publico": null,
@@ -1429,6 +1430,7 @@
       "nombre": "Hiring: Copywriter / Blog Writer",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "$150 portfolio / $400-800/mes market rate",
       "propuesta": "You're hiring for blog and creative copy with an immediate start — that timeline suggests a real content need, not speculative hiring. I write blog content that earns attention rather than just filling a calendar: structured arguments, clear audience focus, and a voice that fits the brand rather than overriding it. Innovkraft's post suggests a digital-forward company, which is where I'm most at home. Rather than sending a standard CV, I'd rather send two relevant writing samples that match your content focus so you can make a faster decision. Reply or DM and I'll have them to you within 24 hours.",
@@ -1444,7 +1446,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "X/Twitter",
       "demo_url": null,
       "email_publico": null,
@@ -1461,6 +1462,7 @@
       "nombre": "Hiring: Copywriter / Blog Writer",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "$150 portfolio / $400-800/mes market rate",
       "propuesta": "You're looking for someone who can write blog content that's both engaging and purposeful — immediate joiners preferred signals this is an active need, not a pipeline post. I write long-form blog content that's structured for readability and designed to serve a specific audience goal, whether that's SEO traction, lead generation, or brand positioning. My portfolio includes content for tech, lifestyle, and service brands across different tones and formats. If you share Innovkraft's content focus or a recent brief, I can send a targeted sample within 48 hours rather than just a CV. That way you can evaluate writing quality directly before moving forward.",
@@ -1476,7 +1478,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "X/Twitter",
       "demo_url": null,
       "email_publico": null,
@@ -1493,6 +1494,7 @@
       "nombre": "Hiring: Copywriter",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "$500 portfolio / $1,200-2,000 market (per product launch or retainer)",
       "propuesta": "Your listing calls for someone who understands Amazon SEO and marketplace dynamics — not just clean prose. Product listings live or die on keyword hierarchy, bullet structure, and conversion intent, and those require a different discipline than blog writing. I've written listings optimized for A9 search ranking while maintaining brand voice across marketplace formats including Amazon, Walmart, and Etsy. Five-plus years in eCommerce copy means I understand the difference between ranking and converting. If you have a specific product category in mind, send it over and I'll return a sample title and bullet set so you can evaluate fit before committing.",
@@ -1508,7 +1510,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Reddit r/freelance_forhire",
       "demo_url": null,
       "email_publico": null,
@@ -1525,6 +1526,7 @@
       "nombre": "[Hiring] [Remote] Rubrics Writer / Auditor $25-$45/hour",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "$25/hr portfolio / $40-45/hr market rate",
       "propuesta": "Mercor's rubric-based evaluation work is a strong fit for a writer who understands how quality and nuance get defined at the structural level — not just felt. I've written and edited across a range of formats and can apply predefined frameworks rigorously while also flagging where rubrics miss edge cases in conversational content. The short-term, project-based nature works well for my schedule. I'd bring both the writing judgment and the evaluator discipline you're describing. If the rubric-drafting component is part of the scope, that's where I tend to add the most value. Open to a brief screening call or a test evaluation task to demonstrate fit.",
@@ -1540,7 +1542,6 @@
     },
     {
       "canal_sugerido": "whatsapp",
-      "caso_exito_id": null,
       "ciudad": "Reddit r/forhire",
       "demo_url": null,
       "email_publico": null,
@@ -1557,6 +1558,7 @@
       "nombre": "[HIRING] Freelance Outbound Lead Gen for AI/Web Agency (Remote, Performance-Based)",
       "pais": null,
       "photo_urls": [],
+      "pitch_audio_url": null,
       "pitch_script_text": null,
       "pricing_sugerido": "$25/hr portfolio / $40/hr + performance market rate",
       "propuesta": "You're not looking for someone to blast templates — you want someone who can research a founder, craft a message that earns a reply, and convert that into a booked call. That's a writing and strategy problem as much as a sales one. I specialize in cold outreach copy for AI and SaaS clients: short, direct messages that reference something specific about the prospect rather than generic pain points. I can show you reply-rate data from past campaigns. Performance-based upside works for me if the product and targeting are solid. Want to see two sample outreach sequences I'd use for your agency?",
@@ -1575,23 +1577,19 @@
     {
       "id": 1,
       "nombre_cliente": "Industria hotelera",
-      "ciudad": "LATAM/USA",
       "nicho": "hotel",
       "pais": "GENERIC",
-      "resultado_concreto": "68% de hoteles sin web pierden reservas directas (Skift 2024)",
-      "testimonio_corto": "Con web propia se recupera 15-25%",
+      "resultado_concreto": "68% de hoteles sin web pierden reservas (Skift 2024)",
       "idioma": "es",
       "activo": 1,
       "usado_count": 0
     },
     {
       "id": 3,
-      "nombre_cliente": "Industria de tours",
-      "ciudad": "LATAM/USA",
+      "nombre_cliente": "Industria tours",
       "nicho": "tour operator",
       "pais": "GENERIC",
-      "resultado_concreto": "40% de los tours se reservan online 24h antes (Arival 2024)",
-      "testimonio_corto": "Sin web walk-ins <30%",
+      "resultado_concreto": "40% de tours se reservan online 24h antes",
       "idioma": "es",
       "activo": 1,
       "usado_count": 3
@@ -1599,57 +1597,43 @@
     {
       "id": 5,
       "nombre_cliente": "Industria charter",
-      "ciudad": "LATAM/USA",
       "nicho": "charter fishing",
       "pais": "GENERIC",
-      "resultado_concreto": "Clientes americanos reservan 2+ semanas antes",
-      "testimonio_corto": "",
+      "resultado_concreto": "Clientes USA reservan 2+ semanas antes",
       "idioma": "es",
       "activo": 1,
       "usado_count": 1
-    },
-    {
-      "id": 7,
-      "nombre_cliente": "Industria buceo",
-      "ciudad": "LATAM/USA",
-      "nicho": "dive shop",
-      "pais": "GENERIC",
-      "resultado_concreto": "Buzos PADI/SSI filtran por web en inglés",
-      "testimonio_corto": "",
-      "idioma": "es",
-      "activo": 1,
-      "usado_count": 0
     }
   ],
   "whatsapp_send_log": [
     {
-      "lead_id": "local_ChIJ-WpYBfq22YgRSEtZyn3upS8",
-      "sent_at_date": "2026-04-17",
-      "batch_type": "morning",
-      "estimated_sent": 0,
-      "pais": null
-    },
-    {
-      "lead_id": "local_ChIJ3bHaTUUtTo8R6FlVhvaTBzE",
+      "lead_id": "x1",
       "sent_at_date": "2026-04-17",
       "batch_type": "morning",
       "estimated_sent": 0,
       "pais": "MX"
     },
     {
-      "lead_id": "local_ChIJjVkoFiNLr4YR-50mVxn9uVY",
+      "lead_id": "x2",
       "sent_at_date": "2026-04-17",
       "batch_type": "morning",
       "estimated_sent": 0,
       "pais": "MX"
+    },
+    {
+      "lead_id": "x3",
+      "sent_at_date": "2026-04-17",
+      "batch_type": "afternoon",
+      "estimated_sent": 0,
+      "pais": "US"
     }
   ],
   "settings": {
     "dashboard_password": "coastal2026",
     "ciudades_activas": "Tulum,Cancun,Playa del Carmen,Cabo San Lucas,Puerto Vallarta,Miami,Miami Beach,Key West,San Diego,Santa Monica",
     "nichos_activos": "boutique hotel B&B,tour operator snorkel cenote,pesca deportiva charter,scuba dive shop,yates jet-ski,wedding planner,spa wellness",
-    "horario_preferido": "morning",
-    "nombre_comercial": "Robert Martinez — Bilingual Web Builder"
+    "nombre_comercial": "Robert Martinez — Bilingual Web Builder",
+    "elevenlabs_status": "blocked_free_tier"
   },
   "pipeline_stages": [
     {
@@ -1658,36 +1642,11 @@
       "nombre": "saiki dentistas",
       "plataforma_ciudad": "Ciudad de Mexico",
       "nicho": "dentista",
-      "idioma": "es",
-      "link": "https://www.google.com/maps/search/?api=1&query=saiki%20dentistas",
-      "whatsapp": "https://wa.me/525550828047",
       "stage": "RESPONDIO_CALIENTE",
       "stage_entered_at": "2026-04-16T15:00:00Z",
       "last_message_sent_at": "2026-04-16T14:30:00Z",
       "notes": "Pregunto precio",
-      "objection_type": null,
-      "upsell_stage": 0,
       "closed_amount_usd": null,
-      "created_at": "2026-04-14T13:00:00Z",
-      "updated_at": "2026-04-17T03:00:00Z"
-    },
-    {
-      "lead_id": "local_ChIJ7XC_Mg8pRI4RJSkHxgenAiE",
-      "tipo": "local",
-      "nombre": "Victoriosa nails spa",
-      "plataforma_ciudad": "Medellin",
-      "nicho": "salon de belleza",
-      "idioma": "es",
-      "link": "",
-      "whatsapp": "https://wa.me/573233213545",
-      "stage": "DEMO_ENVIADA",
-      "stage_entered_at": "2026-04-16T10:00:00Z",
-      "last_message_sent_at": "2026-04-16T10:00:00Z",
-      "notes": "Demo enviada",
-      "objection_type": null,
-      "upsell_stage": 0,
-      "closed_amount_usd": null,
-      "created_at": "2026-04-13T13:00:00Z",
       "updated_at": "2026-04-17T03:00:00Z"
     },
     {
@@ -1696,17 +1655,10 @@
       "nombre": "Arepas del Valle",
       "plataforma_ciudad": "Barranquilla",
       "nicho": "restaurante",
-      "idioma": "es",
-      "link": "",
-      "whatsapp": "https://wa.me/573001234567",
       "stage": "CERRADO_GANADO",
       "stage_entered_at": "2026-04-10T13:00:00Z",
-      "last_message_sent_at": "2026-04-10T13:00:00Z",
       "notes": "Pago recibido",
-      "objection_type": null,
-      "upsell_stage": 0,
       "closed_amount_usd": 497,
-      "created_at": "2026-03-28T13:00:00Z",
       "updated_at": "2026-04-10T13:00:00Z"
     }
   ],
@@ -1717,10 +1669,6 @@
       "run_date": "2026-04-17",
       "leads_synced": 11,
       "messages_generated": 11,
-      "hot_leads": 1,
-      "breakups": 0,
-      "upsells": 1,
-      "email_sent": 1,
       "revenue_month_usd": 497
     }
   ],
@@ -1851,5 +1799,214 @@
       "lead_id": "local_ChIJgQQjoRksTI8Rls6CpsbcC1s",
       "mensaje_preparado": "Hola! Te hice una demo de web bilingüe EN/ES para tu negocio, gratis. Querés verla?"
     }
-  ]
+  ],
+  "programas_afiliados": [
+    {
+      "comision_pct": 25,
+      "empresa": "Booking.com",
+      "id": 1,
+      "nicho": "hotel",
+      "nombre_programa": "Booking.com Affiliate Partner",
+      "notas": "Top prioridad. 25% del comisionable de Booking. Registro rápido.",
+      "prioridad": "A",
+      "requisitos": "Web o cuenta social activa. Pago desde $100. Cookie 24h.",
+      "status": "discovered",
+      "url_programa": "https://www.booking.com/affiliate-program/v2/index.html",
+      "url_signup": "https://admin.booking.com/affiliate/register.html"
+    },
+    {
+      "comision_pct": 8,
+      "empresa": "GetYourGuide",
+      "id": 2,
+      "nicho": "tour operator",
+      "nombre_programa": "GetYourGuide Partner",
+      "notas": "Ideal para tours Tulum/Cancún/Cabo. 8-12% según volumen.",
+      "prioridad": "A",
+      "requisitos": "Audiencia turística. Cookie 31 días. Sin mínimo seguidores.",
+      "status": "discovered",
+      "url_programa": "https://partner.getyourguide.com/es/",
+      "url_signup": "https://partner.getyourguide.com/es/signup/affiliate/"
+    },
+    {
+      "comision_pct": 8,
+      "empresa": "Viator (Tripadvisor)",
+      "id": 3,
+      "nicho": "tour operator",
+      "nombre_programa": "Viator Affiliate",
+      "notas": "Catálogo enorme de tours. 8% base.",
+      "prioridad": "A",
+      "requisitos": "Web/social con foco en viajes. Cookie 30 días.",
+      "status": "discovered",
+      "url_programa": "https://www.viator.com/affiliate/",
+      "url_signup": "https://www.viator.com/affiliate/application"
+    },
+    {
+      "comision_pct": 3,
+      "empresa": "Amazon",
+      "id": 8,
+      "nicho": "equipo_playa",
+      "nombre_programa": "Amazon Associates (travel gear)",
+      "notas": "Para productos playa: snorkel gear, coolers, rashguards, etc.",
+      "prioridad": "A",
+      "requisitos": "3 ventas en primeros 180 días. Cookie 24h.",
+      "status": "discovered",
+      "url_programa": "https://afiliados.amazon.com.mx/",
+      "url_signup": "https://afiliados.amazon.com.mx/"
+    },
+    {
+      "comision_pct": 8,
+      "empresa": "Civitatis",
+      "id": 9,
+      "nicho": "tour operator",
+      "nombre_programa": "Civitatis Afiliados",
+      "notas": "Fuerte en mercado hispano. Perfecto match con audiencia LATAM.",
+      "prioridad": "A",
+      "requisitos": "Web/social en español. Cookie 45 días. Sin mínimo.",
+      "status": "discovered",
+      "url_programa": "https://www.civitatis.com/es/afiliados/",
+      "url_signup": "https://www.civitatis.com/es/afiliados/registrarse/"
+    },
+    {
+      "comision_pct": 5,
+      "empresa": "Klook",
+      "id": 4,
+      "nicho": "tour operator",
+      "nombre_programa": "Klook Affiliate Program",
+      "notas": "Fuerte en Asia pero crece en LATAM. 5%.",
+      "prioridad": "B",
+      "requisitos": "Cuenta social con contenido de viaje. Cookie 30 días.",
+      "status": "discovered",
+      "url_programa": "https://affiliate.klook.com/",
+      "url_signup": "https://affiliate.klook.com/signup"
+    },
+    {
+      "comision_pct": 11,
+      "empresa": "Expedia",
+      "id": 5,
+      "nicho": "hotel",
+      "nombre_programa": "Expedia TAAP",
+      "notas": "Enfoque en agentes. Mejor para usuario con algo de tráfico.",
+      "prioridad": "B",
+      "requisitos": "Agencia o afiliado registrado. Cookie variable.",
+      "status": "discovered",
+      "url_programa": "https://taap.expedia.com/",
+      "url_signup": "https://taap.expedia.com/register"
+    },
+    {
+      "comision_pct": 6,
+      "empresa": "Hotels.com",
+      "id": 6,
+      "nicho": "hotel",
+      "nombre_programa": "Hotels.com Affiliates",
+      "notas": "6% por reserva completada.",
+      "prioridad": "B",
+      "requisitos": "Web o blog de viajes. Cookie 7 días.",
+      "status": "discovered",
+      "url_programa": "https://www.hotels.com/affiliates",
+      "url_signup": "https://www.hotels.com/affiliates/signup"
+    },
+    {
+      "comision_pct": 5,
+      "empresa": "Agoda",
+      "id": 7,
+      "nicho": "hotel",
+      "nombre_programa": "Agoda Partners",
+      "notas": "Fuerte en Asia + México. 5-7%.",
+      "prioridad": "B",
+      "requisitos": "Web/social activa. Cookie 30 días.",
+      "status": "discovered",
+      "url_programa": "https://partners.agoda.com/",
+      "url_signup": "https://partners.agoda.com/en-us/signup.html"
+    },
+    {
+      "comision_pct": 50,
+      "empresa": "Skyscanner",
+      "id": 11,
+      "nicho": "transport",
+      "nombre_programa": "Skyscanner Travel Insight",
+      "notas": "50% comisión de referral fee — alto valor por vuelo.",
+      "prioridad": "B",
+      "requisitos": "Web con tráfico de viajes. Cookie 30 días.",
+      "status": "discovered",
+      "url_programa": "https://partners.skyscanner.net/",
+      "url_signup": "https://partners.skyscanner.net/signup"
+    },
+    {
+      "comision_pct": 6,
+      "empresa": "Tiqets",
+      "id": 12,
+      "nicho": "tour operator",
+      "nombre_programa": "Tiqets Affiliate",
+      "notas": "Museos + atracciones turísticas. Fuerte en Europa.",
+      "prioridad": "B",
+      "requisitos": "Sin mínimo. Cookie 30 días.",
+      "status": "discovered",
+      "url_programa": "https://www.tiqets.com/es/afiliados/",
+      "url_signup": "https://www.tiqets.com/es/afiliados/signup"
+    },
+    {
+      "comision_pct": 0,
+      "empresa": "Airbnb",
+      "id": 10,
+      "nicho": "vacation_rental",
+      "nombre_programa": "Airbnb Associates (limited)",
+      "notas": "Programa casi suspendido. Baja prioridad.",
+      "prioridad": "C",
+      "requisitos": "Actualmente limitado a partners enterprise. Verificar estado.",
+      "status": "discovered",
+      "url_programa": "https://www.airbnb.com/associates",
+      "url_signup": "https://www.airbnb.com/associates"
+    }
+  ],
+  "contenido_afiliados": [
+    {
+      "caption_corta": "Tulum tiene hoteles boutique que NO aparecen en Instagram. Aquí los 5. 🌿 #Tulum #HotelesTulum #ViajarMéxico",
+      "caption_larga": "Cinco hoteles boutique en Tulum que la mayoría de viajeros nunca encuentran — y que cuestan menos de lo que piensas.\n\nNo tienen influencers posando en su alberca. No tienen miles de reseñas. Pero tienen algo mejor: privacidad real, cenotes privados, y ese vibe de Tulum que ya es difícil encontrar en la zona hotelera. Los encontré en Booking filtrando por puntuación +9 y menos de 50 reseñas — ese es el truco.\n\nLink en bio con los 5 hoteles directo a Booking. Sin búsqueda, sin perder tiempo. Reserva antes de que alguien más los descubra.",
+      "cta": "Link en bio — los 5 hoteles directo en Booking, sin búsqueda.",
+      "fecha": "2026-04-20",
+      "hashtags": "#Tulum,#HotelesTulum,#TulumMexico,#ViajarMexico,#HotelesBoutique,#TulumHotel,#ViajesLatam,#MexicoTravel,#PlayaDelCarmen,#RivieraMaya,#TulumVibes,#HotelesSecretos",
+      "hook": "Tulum tiene hoteles que Instagram esconde",
+      "id": 1,
+      "link_afiliado_usado": "Booking.com — enlace de afiliado filtrado por Tulum, puntuación 9+, categoría boutique/bed & breakfast",
+      "plataforma": "tiktok_ig_yt",
+      "script": "Tulum tiene hoteles que nadie te muestra. No están en Instagram. No tienen influencers. Pero tienen cenote privado, selva real, y silencio. Cinco propiedades boutique que encontré filtrando en Booking por puntuación mayor a 9 y menos de 50 reseñas. Ese filtro es todo. El primero tiene cabañas sobre el agua. El segundo tiene temazcal incluido en la tarifa. El tercero está a diez minutos a pie de las ruinas. Ninguno tiene más de veinte cuartos. Eso es exactamente el punto. Precios desde 80 dólares la noche. Link en bio con los cinco directo en Booking.",
+      "status": "sugerido",
+      "tema": "Hoteles boutique secretos en Tulum",
+      "tipo": "reel"
+    },
+    {
+      "caption_corta": "El tour de cenotes más famoso de Playa del Carmen cuesta la mitad si reservas online. No es broma. #Cenotes #PlayaDelCarmen #GetYourGuide",
+      "caption_larga": "Si llegas a la entrada de los cenotes sin reserva, pagas precio turista full. Si reservas online con GetYourGuide o Civitatis, el ahorro es entre 40 y 60 por ciento. Eso es real.\n\nEl tour incluye Dos Ojos, El Eden, o el circuito de Aktun Chen dependiendo del paquete. Transporte desde Playa del Carmen, snorkel, guía bilingüe y entrada están incluidos. No tienes que negociar nada en la calle ni subirte a una van sin saber a dónde vas.\n\nLink en bio con el tour exacto en GetYourGuide. Precio confirmado, cancelación gratuita 24 horas antes. Reserva con tiempo — los cupos se llenan entre jueves y domingo.",
+      "cta": "Link en bio — tour de cenotes en GetYourGuide, cancelación gratis 24 horas antes.",
+      "fecha": "2026-04-20",
+      "hashtags": "#Cenotes,#PlayaDelCarmen,#CenotesM​exico,#RivieraMaya,#ToursCenotes,#MexicoTravel,#ViajarMexico,#GetYourGuide,#Civitatis,#DosoJos,#TulumTours,#ViajesLatam",
+      "hook": "Este cenote cuesta la mitad reservando online",
+      "id": 2,
+      "link_afiliado_usado": "GetYourGuide — tour cenotes Playa del Carmen / Civitatis como alternativa con opción en español",
+      "plataforma": "tiktok_ig_yt",
+      "script": "El tour de cenotes más popular de Playa del Carmen. En la entrada cobran precio completo. Online cuesta la mitad. No es exageración. En GetYourGuide el mismo circuito, con transporte incluido, snorkel, y guía, sale entre 40 y 60 por ciento más barato. Cenotes como Dos Ojos o Aktun Chen están en los paquetes. Transporte desde tu hotel en Playa, equipo incluido, grupos pequeños. Sin negociar en la calle. Sin sorpresas. El truco es reservar con mínimo dos días de anticipación porque los cupos del fin de semana se agotan rápido. Link en bio con el tour exacto. Cancelación gratis si cambian tus planes.",
+      "status": "sugerido",
+      "tema": "Tour cenotes Playa del Carmen — ahorro reservando online",
+      "tipo": "reel"
+    },
+    {
+      "caption_corta": "Nadie te dice esto antes de ir a Cabo. Ahora lo sabes. 🌊 #LosCabos #CaboSanLucas #ViajarMexico",
+      "caption_larga": "Cabo no es barato. Eso ya lo sabes. Pero hay cosas que la mayoría aprende al llegar — y ya es tarde para cambiarlas.\n\nPrimero: el centro de Cabo San Lucas y San José del Cabo son completamente distintos. Si buscas tranquilidad, reserva en San José. Si buscas vida nocturna y playa de fiesta, Cabo San Lucas. No es lo mismo y los hoteles no te lo aclaran. Segundo: el transporte desde el aeropuerto puede costarte 80 dólares si no lo reservas antes. Con GetYourGuide o directamente en Booking Transfers el mismo traslado sale desde 25. Tercero: El Arco solo se ve bien desde el agua — reserva el tour en lancha con anticipación, los lugares se agotan antes del mediodía.\n\nLink en bio con el hotel mejor valorado por zona y el tour de El Arco en GetYourGuide. Dos clicks y Cabo tiene sentido.",
+      "cta": "Link en bio — hotel por zona y tour de El Arco directo, sin perder tiempo buscando.",
+      "fecha": "2026-04-24",
+      "hashtags": "#LosCabos,#CaboSanLucas,#SanJoseDelCabo,#ViajarMexico,#MexicoTravel,#CaboTravel,#ViajesLatam,#ConsejosViaje,#GetYourGuide,#BookingMexico,#ElArco,#BajaCalifornia",
+      "hook": "Nadie te dice esto antes de ir a Cabo",
+      "id": 3,
+      "link_afiliado_usado": "Booking.com para hoteles segmentados por zona (Cabo San Lucas vs San José del Cabo) + GetYourGuide para tour El Arco en lancha y traslado aeropuerto",
+      "plataforma": "tiktok_ig_yt",
+      "script": "Cabo tiene dos ciudades. Cabo San Lucas: fiesta, playa, ruido. San José del Cabo: tranquilo, galerías, restaurantes buenos. Reservar en el lugar equivocado arruina el viaje. Eso nadie te lo dice al buscar hotel. Segundo dato: el transfer del aeropuerto puede costarte 80 dólares si lo tomas en el aeropuerto. Reservándolo antes sale desde 25. Misma ruta, mismo destino. Tercero: El Arco solo se ve desde el agua. El tour en lancha dura 45 minutos y los cupos se acaban antes del mediodía. Resérvalo la noche anterior en GetYourGuide. Link en bio con hotel por zona y el tour exacto. Ya sabes qué hacer.",
+      "status": "sugerido",
+      "tema": "Consejos reales antes de ir a Cabo San Lucas",
+      "tipo": "reel"
+    }
+  ],
+  "elevenlabs_status": {
+    "active": false,
+    "reason": "Free tier blocked (datacenter IP). Upgrade to Starter $5/mo or run locally."
+  }
 }
