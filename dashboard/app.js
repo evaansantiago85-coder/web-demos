@@ -232,11 +232,19 @@ function LeadDrawer(p){
           h('div',{className:'card p-3 text-sm',style:{whiteSpace:'pre-wrap',background:'#ECFDF5',border:'1px solid #BBF7D0',color:'#334155'}},lead.mensaje_whatsapp),
           h('button',{className:'btn-o',style:{fontSize:11,marginTop:8},onClick:function(){navigator.clipboard.writeText(lead.mensaje_whatsapp);toast('📋 Copiado');}},'📋 Copiar')
         ):null,
-        lead.pitch_script_text?h('div',null,
-          h('h3',{className:'font-bold text-sm mb-2'},'🎙️ Pitch de voz'),
-          h('div',{className:'card p-3 text-sm',style:{whiteSpace:'pre-wrap',background:'#FAF5FF',border:'1px solid #E9D5FF',fontFamily:'monospace'}},lead.pitch_script_text),
-          h('div',{className:'text-xs mt-2',style:{color:'#7E22CE'}},'💡 Copia a ',h('a',{href:'https://elevenlabs.io',target:'_blank',style:{textDecoration:'underline'}},'ElevenLabs'),' o grábate tú mismo')
-        ):null,
+        (lead.pitch_script_text && !lead.pitch_audio_ready)?h('div',null,
+          h('h3',{className:'font-bold text-sm mb-2'},'🎙️ Script de pitch listo para ElevenLabs'),
+          h('div',{style:{background:'#FAF5FF',border:'1px solid #E9D5FF',borderRadius:8,padding:12}},
+            h('div',{style:{fontSize:12,color:'#7E22CE',fontWeight:700,marginBottom:8}},'Voz sugerida: '+(lead.idioma_principal==='en'?'Josh / Adam':'Mateo / Santiago')+' · Stability 35% · Similarity 75% · Style 65%'),
+            h('textarea',{readOnly:true,value:lead.pitch_script_text,style:{width:'100%',minHeight:120,padding:10,border:'1px solid #E9D5FF',borderRadius:6,fontSize:13,fontFamily:'monospace',background:'#fff',resize:'vertical'}}),
+            h('div',{style:{display:'flex',gap:6,flexWrap:'wrap',marginTop:8}},
+              h('button',{className:'btn-p',style:{fontSize:11},onClick:function(){navigator.clipboard.writeText(lead.pitch_script_text);toast('📋 Script copiado');}},'📋 Copiar script'),
+              h('a',{href:'https://elevenlabs.io/app/speech-synthesis/text-to-speech',target:'_blank',className:'btn-s',style:{fontSize:11}},'🚀 Abrir ElevenLabs'),
+              h('button',{className:'btn-o',style:{fontSize:11},onClick:function(){queue('AUDIO_READY',{lead_id:lead.id});toast('✅ Marcado como listo');}},'✅ Ya tengo audio')
+            ),
+            h('div',{style:{fontSize:11,color:'#64748B',marginTop:8,lineHeight:1.5}},'💡 Pega el script en ElevenLabs, descarga el MP3, envíalo como nota de voz por WhatsApp junto con el link de demo. ~30 segundos por pitch.')
+          )
+        ):(lead.pitch_audio_ready?h('div',{style:{background:'#ECFDF5',border:'1px solid #BBF7D0',borderRadius:8,padding:12,fontSize:13,color:'#166534'}},'✅ Audio listo para este lead'):null),
         
         (function(){
           var canales = (p.canales || []).filter(function(c){return c.lead_id===lead.id;});
